@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import UserEngagement from '@/components/layout/UserEngagement';
 import Script from 'next/script';
+import { ThemeProvider } from '@/components/providers/ThemeProvider';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
@@ -68,12 +69,14 @@ export default function RootLayout({
                 />
             </head>
             <body className="min-h-screen flex flex-col pt-0">
-                <Header />
-                <main className="flex-grow">
-                    {children}
-                </main>
-                <Footer />
-                <UserEngagement />
+                <ThemeProvider>
+                    <Header />
+                    <main className="flex-grow">
+                        {children}
+                    </main>
+                    <Footer />
+                    <UserEngagement />
+                </ThemeProvider>
                 <Script
                     id="klaviyo-onsite"
                     strategy="afterInteractive"

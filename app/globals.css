@@ -3,19 +3,26 @@
 @tailwind utilities;
 
 :root {
+  /* Default LIGHT Mode */
+  --background: #DBE9F3;
+  --foreground: #000000;
+  --primary: #000000;
+  --secondary: #4b5563; /* Gray-600 */
+  --accent: #E81F27; /* Red Button */
+  --surface: #E5EFF7; /* Slightly lighter surface for light mode */
+  
+  /* Modern clean fonts */
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-outfit: 'Outfit', system-ui, sans-serif;
+}
+
+[data-theme='dark'] {
   --background: #0a0a0a;
   --foreground: #ffffff;
   --primary: #ffffff;
   --secondary: #9ca3af;
-  /* Gray-400 */
   --accent: #3b82f6;
-  /* Blue-500 - can be adjusted based on preference */
   --surface: #171717;
-  /* Neutral-900 */
-
-  /* Modern clean fonts */
-  --font-inter: 'Inter', system-ui, sans-serif;
-  --font-outfit: 'Outfit', system-ui, sans-serif;
 }
 
 body {
