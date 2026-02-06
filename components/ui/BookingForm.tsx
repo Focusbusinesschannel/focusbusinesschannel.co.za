@@ -70,9 +70,9 @@ export default function BookingForm() {
     };
 
     return (
-        <div className="bg-surface/50 border border-white/10 p-8 rounded-3xl h-full flex flex-col justify-center">
-            <h3 className="text-2xl font-display font-bold mb-6 text-white">Book a Strategy Call</h3>
-            <p className="text-gray-400 mb-8 text-sm">
+        <div className="bg-surface/50 border border-foreground/10 p-8 rounded-3xl h-full flex flex-col justify-center">
+            <h3 className="text-2xl font-display font-bold mb-6 text-foreground">Book a Strategy Call</h3>
+            <p className="text-foreground/70 mb-8 text-sm">
                 Fill out the form below to schedule your free 20-minute growth consultation.
             </p>
 
@@ -88,8 +88,8 @@ export default function BookingForm() {
                         <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center text-accent mb-4">
                             <CheckCircle size={32} />
                         </div>
-                        <h3 className="text-xl font-display font-bold text-white mb-2">Message Sent!</h3>
-                        <p className="text-gray-400 mb-6 text-sm">
+                        <h3 className="text-xl font-display font-bold text-foreground mb-2">Message Sent!</h3>
+                        <p className="text-foreground/70 mb-6 text-sm">
                             We'll get back to you within 24 hours.
                         </p>
                         <button
@@ -106,7 +106,7 @@ export default function BookingForm() {
                                 type="text"
                                 value={formData.name}
                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                className={`w-full bg-white/5 border ${errors.name ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white focus:border-accent outline-none transition-colors text-sm`}
+                                className={`w-full bg-background/50 border ${errors.name ? 'border-red-500' : 'border-foreground/10'} rounded-xl px-4 py-3 text-foreground focus:border-accent outline-none transition-colors text-sm`}
                                 placeholder="Full Name"
                                 required
                             />
@@ -117,7 +117,7 @@ export default function BookingForm() {
                                 type="email"
                                 value={formData.email}
                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                className={`w-full bg-white/5 border ${errors.email ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white focus:border-accent outline-none transition-colors text-sm`}
+                                className={`w-full bg-background/50 border ${errors.email ? 'border-red-500' : 'border-foreground/10'} rounded-xl px-4 py-3 text-foreground focus:border-accent outline-none transition-colors text-sm`}
                                 placeholder="Email Address"
                                 required
                             />
@@ -128,7 +128,7 @@ export default function BookingForm() {
                             <textarea
                                 value={formData.message}
                                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                className={`w-full bg-white/5 border ${errors.message ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white focus:border-accent outline-none transition-colors h-24 text-sm`}
+                                className={`w-full bg-background/50 border ${errors.message ? 'border-red-500' : 'border-foreground/10'} rounded-xl px-4 py-3 text-foreground focus:border-accent outline-none transition-colors h-24 text-sm`}
                                 placeholder="How can we help?"
                                 required
                             />
@@ -145,7 +145,7 @@ export default function BookingForm() {
                         <button
                             type="submit"
                             disabled={status === 'submitting'}
-                            className="w-full py-3 bg-white text-black font-bold rounded-xl hover:bg-accent hover:text-white transition-all flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                            className="w-full py-3 bg-foreground text-background font-bold rounded-xl hover:bg-accent hover:text-white transition-all flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed text-sm"
                         >
                             {status === 'submitting' ? (
                                 <>Submitting... <Loader2 className="animate-spin" size={16} /></>

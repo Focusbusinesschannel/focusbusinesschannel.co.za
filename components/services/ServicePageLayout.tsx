@@ -41,7 +41,7 @@ export default function ServicePageLayout({
     faqs
 }: ServicePageLayoutProps) {
     return (
-        <div className="min-h-screen bg-background text-white font-sans selection:bg-accent selection:text-white">
+        <div className="min-h-screen bg-background text-foreground font-sans selection:bg-accent selection:text-white">
             {/* Navigation */}
             <nav className="fixed top-0 left-0 right-0 z-50 py-6 px-6 bg-gradient-to-b from-background to-transparent pointer-events-none">
                 <div className="container mx-auto flex justify-between items-center pointer-events-auto">
