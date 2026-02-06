@@ -3,8 +3,8 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Web Development',
-    description: 'Bespoke web development solutions focusing on performance, scalability, and user experience.',
+    title: 'Website Design',
+    description: 'Responsive and user-friendly websites designed to drive real results.',
     alternates: {
         canonical: '/services/web-development'
     }
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 export default function WebDevelopmentPage() {
     return (
         <ServicePageLayout
-            title="Web Development"
-            subtitle="Product-Led Excellence"
-            description="We build responsive, user-friendly, and SEO-friendly websites that drive measurable results. Using low-code efficiency and high-code precision, we turn your site into a 24/7 salesperson."
+            title="Website Design"
+            subtitle="Responsive & Results-Driven"
+            description="Explore our comprehensive Website Services designed to build responsive and user-friendly websites that drive results. Let us enhance your online presence."
             useCases={[
                 "Low-code rapid deployment with enterprise-grade stability.",
                 "Product-led growth strategies integrated into the core architecture.",

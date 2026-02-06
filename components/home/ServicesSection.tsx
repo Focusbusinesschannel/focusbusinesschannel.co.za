@@ -6,26 +6,26 @@ import Link from 'next/link';
 const services = [
     {
         id: '01',
-        title: 'Web Design & Dev',
-        description: 'High-performance, semantic, and accessible digital experiences.',
+        title: 'Website Design',
+        description: 'Responsive and user-friendly websites designed to drive real results.',
         link: '/services/web-development'
     },
     {
         id: '02',
-        title: 'Growth Marketing',
-        description: 'Data-driven PPC and social strategies that convert.',
+        title: 'Digital Marketing',
+        description: 'Targeted PPC Advertising and social media strategies that boost engagement.',
         link: '/services/performance-marketing'
     },
     {
         id: '03',
-        title: 'Brand Identity',
-        description: 'Visual systems that establish authority and trust.',
+        title: 'Graphic Design',
+        description: 'Creative visual identity services from logos to marketing materials.',
         link: '/services/branding-and-design'
     },
     {
         id: '04',
-        title: 'Accounting & Compliance',
-        description: 'Financial health checks and operational strategy.',
+        title: 'Accounting Services',
+        description: 'Simplify management with bookkeeping, tax returns, and compliance.',
         link: '/services/business-consulting-and-management'
     }
 ];
@@ -40,7 +40,7 @@ export default function ServicesSection() {
                         <h2 className="text-4xl md:text-5xl lg:text-6xl 3xl:text-7xl font-display font-bold text-white">The 360 Approach</h2>
                     </div>
                     <p className="max-w-md text-gray-400 text-base md:text-lg lg:text-xl">
-                        A holistic methodology covering every operational element of your business growth.
+                        With over 6 specialized services, our approach ensures success in every business element.
                     </p>
                 </div>
 

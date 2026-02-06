@@ -83,7 +83,7 @@ export default function ContactSection() {
                         </h2>
 
                         <p className="text-gray-400 text-lg mb-12 max-w-md">
-                            Whether you're looking to scale or just starting out, we have the tools and expertise to help you succeed.
+                            Whether you're looking to scale or just starting out, we have the tailored strategies to help you succeed.
                         </p>
 
                         <div className="space-y-8">
@@ -93,7 +93,7 @@ export default function ContactSection() {
                                 </div>
                                 <div>
                                     <span className="text-xs text-gray-500 uppercase font-bold tracking-widest">Email Us</span>
-                                    <p className="text-white font-medium text-lg">hello@focusbc.com</p>
+                                    <p className="text-white font-medium text-lg">info@focusbusinesschannel.co.za</p>
                                 </div>
                             </div>
 
@@ -103,7 +103,7 @@ export default function ContactSection() {
                                 </div>
                                 <div>
                                     <span className="text-xs text-gray-500 uppercase font-bold tracking-widest">Call Us</span>
-                                    <p className="text-white font-medium text-lg">+1 (27) 81 555 1234</p>
+                                    <p className="text-white font-medium text-lg">069-699-6802</p>
                                 </div>
                             </div>
 
@@ -113,7 +113,7 @@ export default function ContactSection() {
                                 </div>
                                 <div>
                                     <span className="text-xs text-gray-500 uppercase font-bold tracking-widest">Visit Us</span>
-                                    <p className="text-white font-medium text-lg">Focus HQ, Johannesburg, South Africa</p>
+                                    <p className="text-white font-medium text-lg">Germiston, South Africa</p>
                                 </div>
                             </div>
                         </div>

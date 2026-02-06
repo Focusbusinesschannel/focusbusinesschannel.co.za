@@ -12,17 +12,17 @@ const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 export const metadata: Metadata = {
     metadataBase: new URL('https://focusbusinesschannel.co.za'),
     title: {
-        default: 'Focus Business Channel | Growth Partners',
+        default: 'Lead Generation Strategies | Focus Business Channel',
         template: '%s | Focus Business Channel'
     },
-    description: 'Business growth partner providing web development, performance marketing, branding, and business consulting services. We help B2B companies scale with SEO-friendly websites, demand generation campaigns, and strategic consulting.',
-    keywords: ['web development', 'performance marketing', 'business consulting', 'branding', 'SEO', 'demand generation', 'B2B services'],
+    description: 'Lead generation strategies by Focus business channel – Affordable, tailored solutions to grow your business online.',
+    keywords: ['Lead Generation', 'Website Design', 'Digital Marketing', 'Accounting Services', 'Graphic Design', 'SEO', 'Germiston', 'South Africa'],
     alternates: {
         canonical: '/',
     },
     openGraph: {
-        title: 'Focus Business Channel | Growth Partners',
-        description: 'Helping businesses defy gravity with a 360 approach to growth.',
+        title: 'Lead Generation Strategies | Focus Business Channel',
+        description: 'Affordable, tailored solutions to grow your business online.',
         url: 'https://focusbusinesschannel.co.za',
         siteName: 'Focus Business Channel',
         type: 'website',
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Focus Business Channel | Growth Partners',
-        description: 'Helping businesses defy gravity with a 360 approach to growth.',
+        title: 'Lead Generation Strategies | Focus Business Channel',
+        description: 'Affordable, tailored solutions to grow your business online.',
     }
 };
 
@@ -50,12 +50,12 @@ export default function RootLayout({
                             '@context': 'https://schema.org',
                             '@type': 'ProfessionalService',
                             'name': 'Focus Business Channel',
-                            'description': 'Business growth partner providing web development, performance marketing, branding, and business consulting services.',
+                            'description': 'Affordable, tailored solutions to grow your business online.',
                             'url': 'https://focusbusinesschannel.co.za',
                             'logo': 'https://focusbusinesschannel.co.za/logo.png',
                             'address': {
                                 '@type': 'PostalAddress',
-                                'addressLocality': 'Johannesburg'
+                                'addressLocality': 'Germiston'
                             },
                             'aggregateRating': {
                                 '@type': 'AggregateRating',

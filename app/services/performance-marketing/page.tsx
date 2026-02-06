@@ -3,8 +3,8 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Performance Marketing',
-    description: 'Demand generation and ROI-focused marketing strategies using PPC, Search, and Social.',
+    title: 'Digital Marketing',
+    description: 'Enhance your online presence with tailored social media marketing and targeted PPC campaigns.',
     alternates: {
         canonical: '/services/performance-marketing'
     }
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 export default function PerformanceMarketingPage() {
     return (
         <ServicePageLayout
-            title="Performance Marketing"
-            subtitle="Demand Gen & ROI"
-            description="We combine targeted PPC advertising and social media growth strategies aimed at maximum ROI. Our approach leverages Demand Gen and CRO to ensure every click counts."
+            title="Digital Marketing"
+            subtitle="Social Media & PPC Advertising"
+            description="Boost your business with targeted PPC Advertising campaigns and Social Media Management that drive traffic, grow your audience, and build lasting brand visibility."
             useCases={[
                 "Strategic Demand Gen to fill your pipeline with qualified leads.",
                 "Aggressive Conversion Rate Optimization (CRO) to maximize spend.",

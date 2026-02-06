@@ -64,7 +64,7 @@ export default function Hero() {
                                 transition={{ duration: 0.8, ease: "easeOut" }}
                                 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl 3xl:text-5xl font-display font-medium text-white/70 mb-2 whitespace-nowrap"
                             >
-                                Defying Gravity.
+                                All-in-One Solutions.
                             </motion.h3>
 
                             {/* Main H1 with purple-red gradient */}
@@ -74,7 +74,7 @@ export default function Hero() {
                                 transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
                                 className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-8xl 3xl:text-9xl font-display font-bold leading-tight tracking-tight text-white m-0 whitespace-nowrap"
                             >
-                                <span className="text-gradient-purple-red">Driving Growth.</span>
+                                <span className="text-gradient-purple-red">Driving Business Growth.</span>
                             </motion.h1>
                         </div>
 
@@ -85,8 +85,8 @@ export default function Hero() {
                             className="max-w-md 3xl:max-w-xl"
                         >
                             <p className="text-base sm:text-lg md:text-xl 3xl:text-2xl text-secondary leading-relaxed font-sans">
-                                We are not just a digital agency. We are your revenue partners.
-                                Merging technical precision with creative authority to scale your business.
+                                We are business growth partners helping you reach new heights through
+                                strategic solutions, innovative services, and long-term partnerships.
                             </p>
                         </motion.div>
 

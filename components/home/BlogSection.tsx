@@ -17,15 +17,15 @@ export default function BlogSection() {
                     <div className="max-w-2xl">
                         <span className="text-accent text-sm font-bold tracking-widest uppercase mb-4 block">Editorial Insights</span>
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight">
-                            Defying conventions, <br />
-                            <span className="text-gray-500">one insight at a time.</span>
+                            Visit Our Blog, <br />
+                            <span className="text-gray-500">sharing knowledge to empower growth.</span>
                         </h2>
                     </div>
                     <Link
                         href="/blog"
                         className="group flex items-center gap-2 text-white font-bold uppercase tracking-widest text-sm hover:text-accent transition-colors"
                     >
-                        Explore All Insights <ChevronRight size={18} className="group-hover:translate-x-2 transition-transform" />
+                        Learn How to Market Your Business <ChevronRight size={18} className="group-hover:translate-x-2 transition-transform" />
                     </Link>
                 </div>
 

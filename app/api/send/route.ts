@@ -8,8 +8,8 @@ export async function POST(request: Request) {
         const { name, email, subject, message } = await request.json();
 
         const { data, error } = await resend.emails.send({
-            from: 'Focus Contact Form <contact@focusbusinesschannel.co.za>',
-            to: [process.env.CONTACT_EMAIL || 'admin@focusbusinesschannel.co.za'],
+            from: 'Focus Contact Form <info@focusbusinesschannel.co.za>',
+            to: [process.env.CONTACT_EMAIL || 'info@focusbusinesschannel.co.za'],
             subject: `New Contact Form Submission: ${subject}`,
             replyTo: email,
             text: `

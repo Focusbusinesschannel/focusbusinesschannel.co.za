@@ -3,8 +3,8 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Branding & Design',
-    description: 'Strategic art direction and impactful storytelling to establish enterprise-level brand trust.',
+    title: 'Graphic Design',
+    description: 'Elevate your brand visual identity with creative Graphic Design services.',
     alternates: {
         canonical: '/services/branding-and-design'
     }
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 export default function BrandingAndDesignPage() {
     return (
         <ServicePageLayout
-            title="Branding & Design"
-            subtitle="Art Direction & Storytelling"
-            description="We create visual identity systems that establish enterprise-level trust. From impactful storytelling to complete art direction, we ensure your brand stands out with authority."
+            title="Graphic Design"
+            subtitle="Creative Visual Identity"
+            description="Discover our creative Graphic Design services tailored to elevate your brand's visual identity. From logos to marketing materials, we bring your vision to life."
             useCases={[
                 "Impactful Storytelling that resonates with your core audience.",
                 "Strategic Art Direction for a consistent and premium visual language.",

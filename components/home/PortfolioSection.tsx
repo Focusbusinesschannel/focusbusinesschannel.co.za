@@ -8,34 +8,34 @@ import Link from 'next/link';
 const projects = [
     {
         title: 'Dynotech Mobile Mechanics',
-        category: 'Web & SEO',
+        category: 'Website Design & SEO',
         image: '/projects/dynotech-contacts.png',
-        description: 'Lead Growth for a B2B Service Provider. Generated 651 total contacts with 32.5% growth and 730 messaging conversations (+36.4% increase) from September 1, 2024 to March 31, 2025.',
+        description: 'Lead Growth for a B2B Service Provider. Generated 651 total contacts with 32.5% growth and 730 messaging conversations from September 1, 2024 to March 31, 2025.',
         testimonial: '"Affordable, SEO-friendly, and delivered on time" – resulting in weekly online leads',
         metrics: '651 contacts | 730 conversations | 8.2K visits',
         link: '/projects/dynotech-web-seo'
     },
     {
-        title: 'High-Velocity Performance Marketing',
-        category: 'Demand Gen',
+        title: 'High-Velocity PPC Campaigns',
+        category: 'Digital Marketing',
         image: '/projects/dynotech-campaign.png',
-        description: '10-day exposure campaign (Nov 16-26, 2025) fueling rapid pipeline growth. Multi-platform approach with Google Search targeting high-intent queries like "mobile mechanic near me".',
+        description: '10-day exposure campaign fueling rapid pipeline growth. Multi-platform approach with Google Search targeting high-intent queries.',
         metrics: 'ZAR 1,307.14 spend | 270 clicks | 6.46% CTR',
         link: '/projects/high-velocity-marketing'
     },
     {
         title: 'Social Media Authority',
-        category: 'Customer Experience',
+        category: 'Social Media Management',
         image: '/projects/dynotech-social.jpg',
-        description: 'Building long-term trust through strategic engagement. Facebook campaign achieved 257.2K views (+25.9%), 71.1K reach (+11.5%), and 50.3K 3-second views (+201.3%).',
-        metrics: '257.2K views | 113 Instagram link clicks (+370.8%)',
+        description: 'Building long-term trust through strategic engagement. Facebook campaign achieved 257.2K views and 71.1K reach.',
+        metrics: '257.2K views | 113 Instagram link clicks',
         link: '/projects/social-media-authority'
     },
     {
-        title: 'Custom Web Engineering',
-        category: 'Technology Platform',
+        title: 'Complete Branding Identity',
+        category: 'Graphic Design',
         image: '/projects/dynotech-web.png',
-        description: 'Fast, secure, and business-result-driven technology platforms. Built to drive measurable outcomes from launch through sustained growth phases.',
+        description: 'Creative visual identity systems tailored to elevate trust. Built to drive measurable outcomes from launch through sustained growth.',
         metrics: 'SEO-optimized | Mobile-first | Conversion-focused',
         link: '/projects/custom-web-engineering'
     }
@@ -48,7 +48,7 @@ export default function PortfolioSection() {
                 <div className="max-w-3xl 3xl:max-w-5xl mb-16 lg:mb-24">
                     <span className="text-accent text-sm sm:text-base font-bold tracking-widest uppercase mb-4 block">Our Work</span>
                     <h2 className="text-4xl md:text-6xl lg:text-7xl 3xl:text-8xl font-display font-bold text-white mb-6">
-                        Case studies of <span className="text-gray-500">gravity defiance.</span>
+                        Case studies of <span className="text-gray-500">empowering growth.</span>
                     </h2>
                 </div>
 

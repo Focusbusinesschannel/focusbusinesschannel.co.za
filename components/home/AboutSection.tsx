@@ -7,17 +7,16 @@ export default function AboutSection() {
                 <div className="flex flex-col justify-center">
                     <span className="text-accent text-sm sm:text-base font-bold tracking-widest uppercase mb-6 block">Our Mission</span>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl 3xl:text-7xl font-display font-bold text-white mb-8 leading-tight">
-                        We are not for everyone. <br />
-                        <span className="text-gray-500">We are for those ready to dominate.</span>
+                        Empowering Growth. <br />
+                        <span className="text-gray-500">Reach New Heights with Strategic Solutions.</span>
                     </h2>
                     <div className="space-y-6 text-gray-400 text-lg lg:text-xl 3xl:text-2xl leading-relaxed max-w-2xl">
                         <p>
-                            In a crowded digital landscape, "good enough" is the enemy of growth.
-                            We partner with ambitious enterprises to defy web conventions and market limitations.
+                            At Focus Business Channel, we are more than a digital marketing agency—we are your dedicated business growth partners.
                         </p>
                         <p>
-                            From pixel-perfect design to forensic accounting, we bring every critical business pillar under one roof.
-                            This is the "focus" difference: Singular vision, multiple disciplines, exponential results.
+                            Our mission is to help businesses reach new heights through strategic solutions, innovative services, and long-term partnerships.
+                            We deliver tailored strategies that drive real, measurable results.
                         </p>
                     </div>
                 </div>
@@ -46,11 +45,11 @@ export default function AboutSection() {
                             <div className="flex gap-8 lg:gap-12">
                                 <div>
                                     <span className="block text-3xl md:text-4xl 3xl:text-5xl font-bold text-white">60%</span>
-                                    <span className="text-sm md:text-base text-gray-500">Avg. Growth Y1</span>
+                                    <span className="text-sm md:text-base text-gray-500">First Month Growth</span>
                                 </div>
                                 <div>
-                                    <span className="block text-3xl md:text-4xl 3xl:text-5xl font-bold text-white">100+</span>
-                                    <span className="text-sm md:text-base text-gray-500">Projects Delivered</span>
+                                    <span className="block text-3xl md:text-4xl 3xl:text-5xl font-bold text-white">1M+</span>
+                                    <span className="text-sm md:text-base text-gray-500">Verified Leads</span>
                                 </div>
                             </div>
                         </div>

@@ -11,17 +11,17 @@ export default function Footer() {
                             Focus<span className="text-secondary">.</span>
                         </Link>
                         <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-xs">
-                            Your growth partner for the digital age. We combine design, marketing, and strategy to build unignorable brands.
+                            Your dedicated business growth partners. We combine tailored strategies and innovative services to help you reach new heights.
                         </p>
                     </div>
 
                     <div>
                         <h4 className="text-white font-medium mb-6 3xl:text-xl">Services</h4>
                         <ul className="space-y-4 text-sm md:text-base text-gray-400">
-                            <li><Link href="/services/web-development" className="hover:text-white transition-colors">Web Design</Link></li>
+                            <li><Link href="/services/web-development" className="hover:text-white transition-colors">Website Design</Link></li>
                             <li><Link href="/services/performance-marketing" className="hover:text-white transition-colors">Digital Marketing</Link></li>
-                            <li><Link href="/services/business-consulting-and-management" className="hover:text-white transition-colors">Accounting</Link></li>
-                            <li><Link href="/services/branding-and-design" className="hover:text-white transition-colors">Branding</Link></li>
+                            <li><Link href="/services/business-consulting-and-management" className="hover:text-white transition-colors">Accounting Services</Link></li>
+                            <li><Link href="/services/branding-and-design" className="hover:text-white transition-colors">Graphic Design</Link></li>
                         </ul>
                     </div>
 
