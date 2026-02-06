@@ -44,9 +44,20 @@ npm run build
 - `/public`: Static assets (images, fonts, logs).
 - `/lib`: Utility functions and data constants.
 
-## 🌐 Deployment
-This project is configured for seamless deployment on **Vercel**. 
-The repository is structured with the `package.json` at the root to ensure automatic build detection.
+## 🌐 Deployment & Configuration
+
+This project is configured for seamless deployment on **Vercel**.
+
+### 📧 Email Backend (Resend)
+The contact form uses [Resend](https://resend.com). To configure:
+1. Add your domain to Resend and verify DNS.
+2. Set `RESEND_API_KEY` in your environment variables.
+3. Set `CONTACT_EMAIL` to your receiving address.
+
+### 📈 Marketing Tracking (Klaviyo)
+Onsite tracking is integrated via `klaviyo.js`. 
+- **Public API Key**: `Ysdpff` (configured in `layout.tsx`).
+- **Identification**: The contact form automatically identifies users and syncs them to Klaviyo profiles.
 
 ---
 © 2026 Focus Business Channel. All rights reserved.

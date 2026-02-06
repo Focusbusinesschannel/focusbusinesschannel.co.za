@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/api/'],
         },
-        sitemap: 'https://focusbc.com/sitemap.xml',
+        sitemap: 'https://focusbusinesschannel.co.za/sitemap.xml',
     };
 }

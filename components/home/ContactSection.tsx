@@ -48,13 +48,17 @@ export default function ContactSection() {
             }
 
             // Klaviyo Identification
-            if (typeof window !== 'undefined' && (window as any).klaviyo) {
-                (window as any).klaviyo.identify({
-                    '$email': formData.email,
-                    '$first_name': formData.name.split(' ')[0],
-                    '$last_name': formData.name.split(' ').slice(1).join(' '),
-                    'Subject': formData.subject
-                });
+            try {
+                if (typeof window !== 'undefined' && (window as any).klaviyo) {
+                    (window as any).klaviyo.identify({
+                        '$email': formData.email,
+                        '$first_name': formData.name.split(' ')[0],
+                        '$last_name': formData.name.split(' ').slice(1).join(' '),
+                        'Subject': formData.subject
+                    });
+                }
+            } catch (klaviyoError) {
+                console.error('Klaviyo identification failed:', klaviyoError);
             }
 
             setStatus('success');
