@@ -150,6 +150,16 @@ export default function Header() {
 
 function ThemeToggle() {
     const { theme, toggleTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    // Prevent hydration mismatch by rendering a placeholder or nothing until mounted
+    if (!mounted) {
+        return <div className="w-9 h-9" />; // Placeholder of approximate size
+    }
 
     return (
         <button

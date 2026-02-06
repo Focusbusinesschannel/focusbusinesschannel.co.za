@@ -49,13 +49,15 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         }
     };
 
-    // prevent hydration mismatch
-    if (!mounted) {
-        return <>{children}</>;
-    }
-
+    // Always render the Provider so useTheme() works during SSR.
+    // We defer the specific 'mounted' check to the consumer components if they need to avoid hydration mismatch.
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `try{if(localStorage.getItem('theme')==='dark' || (!('theme' in localStorage) && false)){document.documentElement.classList.add('dark');document.documentElement.setAttribute('data-theme', 'dark')}else{document.documentElement.classList.remove('dark');document.documentElement.setAttribute('data-theme', 'light')}}catch(e){}`
+                }}
+            />
             {children}
         </ThemeContext.Provider>
     );
