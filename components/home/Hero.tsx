@@ -85,8 +85,8 @@ export default function Hero() {
                             className="max-w-md 3xl:max-w-xl"
                         >
                             <p className="text-base sm:text-lg md:text-xl 3xl:text-2xl text-secondary leading-relaxed font-sans">
-                                We are business growth partners helping you reach new heights through
-                                strategic solutions, innovative services, and long-term partnerships.
+                                We are your single point of contact for everything a business needs to scale.
+                                As your Business Growth Partner, we bridge the gap between strategy and execution.
                             </p>
                         </motion.div>
 

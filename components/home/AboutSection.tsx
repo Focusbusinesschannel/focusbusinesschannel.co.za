@@ -12,11 +12,10 @@ export default function AboutSection() {
                     </h2>
                     <div className="space-y-6 text-gray-400 text-lg lg:text-xl 3xl:text-2xl leading-relaxed max-w-2xl">
                         <p>
-                            At Focus Business Channel, we are more than a digital marketing agency—we are your dedicated business growth partners.
+                            At Focus Business Channel, we are your **Business Growth Partner**—your single point of contact for every critical business pillar under one roof.
                         </p>
                         <p>
-                            Our mission is to help businesses reach new heights through strategic solutions, innovative services, and long-term partnerships.
-                            We deliver tailored strategies that drive real, measurable results.
+                            We provide a total growth solution, ensuring that your backend is as strong as your marketing, making your expansion safe and sustainable.
                         </p>
                     </div>
                 </div>
