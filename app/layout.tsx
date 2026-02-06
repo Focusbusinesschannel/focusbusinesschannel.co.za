@@ -4,12 +4,13 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import UserEngagement from '@/components/layout/UserEngagement';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://focusbc.com'),
+    metadataBase: new URL('https://focusbusinesschannel.co.za'),
     title: {
         default: 'Focus Business Channel | Growth Partners',
         template: '%s | Focus Business Channel'
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Focus Business Channel | Growth Partners',
         description: 'Helping businesses defy gravity with a 360 approach to growth.',
-        url: 'https://focusbc.com',
+        url: 'https://focusbusinesschannel.co.za',
         siteName: 'Focus Business Channel',
         type: 'website',
         locale: 'en_US',
@@ -50,8 +51,8 @@ export default function RootLayout({
                             '@type': 'ProfessionalService',
                             'name': 'Focus Business Channel',
                             'description': 'Business growth partner providing web development, performance marketing, branding, and business consulting services.',
-                            'url': 'https://focusbc.com',
-                            'logo': 'https://focusbc.com/logo.png',
+                            'url': 'https://focusbusinesschannel.co.za',
+                            'logo': 'https://focusbusinesschannel.co.za/logo.png',
                             'address': {
                                 '@type': 'PostalAddress',
                                 'addressLocality': 'Johannesburg'
@@ -73,6 +74,11 @@ export default function RootLayout({
                 </main>
                 <Footer />
                 <UserEngagement />
+                <Script
+                    id="klaviyo-onsite"
+                    strategy="afterInteractive"
+                    src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=Ysdpff"
+                />
             </body>
         </html>
     );
