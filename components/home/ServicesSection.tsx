@@ -40,21 +40,21 @@ export default function ServicesSection() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-4 lg:space-y-6">
                     {services.map((service) => (
                         <Link
-                            key={service.id}
                             href={service.link}
-                            className="group flex items-center justify-between p-8 bg-surface/50 hover:bg-surface border border-white/5 hover:border-accent/50 rounded-2xl transition-all duration-500"
+                            key={service.id}
+                            className="group block relative border-b border-white/10 py-12 lg:py-16 3xl:py-20 hover:bg-white/5 transition-colors duration-500"
                         >
-                            <div className="flex items-center gap-6">
-                                <span className="text-accent font-mono text-sm">{service.id}</span>
-                                <h3 className="text-2xl md:text-3xl font-display font-medium text-white group-hover:text-accent transition-colors">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 lg:gap-10 px-4">
+                                <span className="text-gray-500 font-mono text-lg lg:text-xl 3xl:text-2xl">{service.id}</span>
+                                <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 3xl:text-8xl font-display font-medium text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all">
                                     {service.title}
                                 </h3>
-                            </div>
-                            <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-500">
-                                <ArrowUpRight size={20} />
+                                <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300 md:ml-auto">
+                                    <ArrowUpRight size={20} className="lg:w-6 lg:h-6" />
+                                </div>
                             </div>
                         </Link>
                     ))}
