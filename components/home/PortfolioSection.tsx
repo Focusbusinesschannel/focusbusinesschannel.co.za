@@ -8,10 +8,10 @@ import Link from 'next/link';
 const projects = [
     {
         title: 'Dynotech Mobile Mechanics',
-        category: 'Website Design & SEO',
+        category: 'AI-Ready Search',
         image: '/projects/dynotech-contacts.png',
-        description: 'Lead Growth for a B2B Service Provider. Generated 651 total contacts with 32.5% growth and 730 messaging conversations from September 1, 2024 to March 31, 2025.',
-        testimonial: '"Affordable, SEO-friendly, and delivered on time" – resulting in weekly online leads',
+        description: 'Lead Growth for a B2B Service Provider. Generated 651 total contacts from September 1, 2024 to March 31, 2025.',
+        testimonial: '"Their services are affordable, SEO-friendly, and delivered on time. Thanks to them, our business now gets more leads online every week."',
         metrics: '651 contacts | 730 conversations | 8.2K visits',
         link: '/projects/dynotech-web-seo'
     },
@@ -19,24 +19,24 @@ const projects = [
         title: 'High-Velocity PPC Campaigns',
         category: 'Digital Marketing',
         image: '/projects/dynotech-campaign.png',
-        description: '10-day exposure campaign fueling rapid pipeline growth. Multi-platform approach with Google Search targeting high-intent queries.',
+        description: '10-day exposure campaign fueling rapid pipeline growth. Multi-platform approach protecting the business from algorithm changes.',
         metrics: 'ZAR 1,307.14 spend | 270 clicks | 6.46% CTR',
         link: '/projects/high-velocity-marketing'
     },
     {
-        title: 'Social Media Authority',
-        category: 'Social Media Management',
+        title: 'Industry Reputation Engine',
+        category: 'Graphic Design',
         image: '/projects/dynotech-social.jpg',
-        description: 'Building long-term trust through strategic engagement. Facebook campaign achieved 257.2K views and 71.1K reach.',
+        description: 'Making our clients the most recognized name in their local market through strategic visual authority.',
         metrics: '257.2K views | 113 Instagram link clicks',
         link: '/projects/social-media-authority'
     },
     {
-        title: 'Complete Branding Identity',
-        category: 'Graphic Design',
+        title: 'Sustainable Growth Structure',
+        category: 'Business Management & Structure',
         image: '/projects/dynotech-web.png',
-        description: 'Creative visual identity systems tailored to elevate trust. Built to drive measurable outcomes from launch through sustained growth.',
-        metrics: 'SEO-optimized | Mobile-first | Conversion-focused',
+        description: 'Ensuring your backend is as strong as your marketing. Built to handle rapid expansion with zero-risk compliance.',
+        metrics: 'Compliant | Sustainable | Scalable',
         link: '/projects/custom-web-engineering'
     }
 ];

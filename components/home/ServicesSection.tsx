@@ -6,26 +6,26 @@ import Link from 'next/link';
 const services = [
     {
         id: '01',
-        title: 'Website Design',
-        description: 'Responsive and user-friendly websites designed to drive real results.',
+        title: 'AI-Ready Search',
+        description: 'We ensure that when people ask AI for recommendations, your business is the answer they get.',
         link: '/services/web-development'
     },
     {
         id: '02',
         title: 'Digital Marketing',
-        description: 'Targeted PPC Advertising and social media strategies that boost engagement.',
+        description: 'Strategic campaigns that turn clicks into customers and protect you from platform changes.',
         link: '/services/performance-marketing'
     },
     {
         id: '03',
         title: 'Graphic Design',
-        description: 'Creative visual identity services from logos to marketing materials.',
+        description: 'Building a reputation engine that makes you the most recognized name in your market.',
         link: '/services/branding-and-design'
     },
     {
         id: '04',
-        title: 'Accounting Services',
-        description: 'Simplify management with bookkeeping, tax returns, and compliance.',
+        title: 'Business Management & Structure',
+        description: 'Strengthening your backend so that your business expansion is safe, sustainable, and compliant.',
         link: '/services/business-consulting-and-management'
     }
 ];

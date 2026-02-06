@@ -3,8 +3,8 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Accounting Services',
-    description: 'Simplify your business management with our accounting and compliance solutions.',
+    title: 'Business Management & Structure',
+    description: 'Growth is only good if your business can handle it. We ensure your backend—compliance, structure, and management—is as strong as your marketing.',
     alternates: {
         canonical: '/services/business-consulting-and-management'
     }
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 export default function BusinessConsultingPage() {
     return (
         <ServicePageLayout
-            title="Accounting Services"
-            subtitle="Compliance & Bookkeeping Solutions"
-            description="Our affordable accounting and bookkeeping services ensure your business stays compliant and financially healthy. We deliver precise financial reporting and insights to support your growth."
+            title="Business Management & Structure"
+            subtitle="Safe & Sustainable Expansion"
+            description="We ensure your backend—compliance, structure, and management—is as strong as your marketing. We make your expansion safe and sustainable, providing the foundation for long-term health."
             useCases={[
                 "Strategic Growth Partnership providing high-level business advisory.",
                 "Comprehensive Sales Enablement to drive revenue and efficiency.",

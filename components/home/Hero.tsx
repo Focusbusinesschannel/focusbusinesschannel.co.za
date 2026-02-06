@@ -64,7 +64,7 @@ export default function Hero() {
                                 transition={{ duration: 0.8, ease: "easeOut" }}
                                 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl 3xl:text-5xl font-display font-medium text-white/70 mb-2 whitespace-nowrap"
                             >
-                                All-in-One Solutions.
+                                Your Total Growth Solution.
                             </motion.h3>
 
                             {/* Main H1 with purple-red gradient */}

@@ -12,17 +12,17 @@ const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 export const metadata: Metadata = {
     metadataBase: new URL('https://focusbusinesschannel.co.za'),
     title: {
-        default: 'Lead Generation Strategies | Focus Business Channel',
+        default: 'Business Growth Services Germiston | Focus Business Channel',
         template: '%s | Focus Business Channel'
     },
-    description: 'Lead generation strategies by Focus business channel – Affordable, tailored solutions to grow your business online.',
-    keywords: ['Lead Generation', 'Website Design', 'Digital Marketing', 'Accounting Services', 'Graphic Design', 'SEO', 'Germiston', 'South Africa'],
+    description: 'Professional marketing partner in Germiston. We provide total growth solutions including AI-ready search, business management, and brand strategy to help your business scale.',
+    keywords: ['Business growth services Germiston', 'Professional marketing partner', 'How to get more leads for my business', 'AI-Ready Search', 'Business Management South Africa'],
     alternates: {
         canonical: '/',
     },
     openGraph: {
-        title: 'Lead Generation Strategies | Focus Business Channel',
-        description: 'Affordable, tailored solutions to grow your business online.',
+        title: 'Business Growth Services Germiston | Focus Business Channel',
+        description: 'Professional marketing partner providing total growth solutions to scale your business.',
         url: 'https://focusbusinesschannel.co.za',
         siteName: 'Focus Business Channel',
         type: 'website',
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Lead Generation Strategies | Focus Business Channel',
-        description: 'Affordable, tailored solutions to grow your business online.',
+        title: 'Business Growth Services Germiston | Focus Business Channel',
+        description: 'Professional marketing partner providing total growth solutions to scale your business.',
     }
 };
 

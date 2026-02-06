@@ -26,17 +26,17 @@ export default function AboutSection() {
                     <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-accent/10 to-transparent opacity-30 blur-3xl" />
 
                     <div className="relative z-10 glass-panel p-8 md:p-10 lg:p-12 3xl:p-20 rounded-2xl w-full">
-                        <h3 className="text-2xl md:text-3xl 3xl:text-4xl font-display font-bold text-white mb-8">Who We Help</h3>
+                        <h3 className="text-2xl md:text-3xl 3xl:text-4xl font-display font-bold text-white mb-8">Direct Growth Solutions</h3>
                         <ul className="space-y-6">
                             {[
-                                "Scaling Startups seeking Series A/B funding",
-                                "Established B2B Service Providers",
-                                "E-commerce brands needing technical optimization",
-                                "Enterprise companies requiring compliance & strategy"
+                                { q: "Our leads aren't turning into sales.", a: "We bridge the gap so your team only talks to people ready to buy." },
+                                { q: "We rely too much on one platform.", a: "We spread your presence so one algorithm change doesn't stop your phone ringing." },
+                                { q: "We are the industry's best-kept secret.", a: "We build a reputation engine that makes you the most recognized name." },
+                                { q: "I don't know if my marketing is working.", a: "We provide simple reports showing exactly how much profit you made." }
                             ].map((item, i) => (
-                                <li key={i} className="flex items-start gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent">✓</span>
-                                    <span className="text-gray-300 font-medium md:text-lg 3xl:text-xl">{item}</span>
+                                <li key={i} className="flex flex-col gap-1">
+                                    <span className="text-white font-bold text-sm md:text-base italic">"{item.q}"</span>
+                                    <span className="text-gray-400 text-sm md:text-base">{item.a}</span>
                                 </li>
                             ))}
                         </ul>
