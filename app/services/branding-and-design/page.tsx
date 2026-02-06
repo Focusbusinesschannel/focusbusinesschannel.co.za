@@ -13,36 +13,51 @@ export const metadata: Metadata = {
 export default function BrandingAndDesignPage() {
     return (
         <ServicePageLayout
-            title="Graphic Design"
-            subtitle="Creative Visual Identity"
-            description="Discover our creative Graphic Design services tailored to elevate your brand's visual identity. From logos to marketing materials, we bring your vision to life."
+            title="Branding & Visual Identity"
+            subtitle="Look Like The Leader You Are"
+            description="Look like the market leader you are. We create professional visuals that build instant trust with your customers."
             useCases={[
-                "Impactful Storytelling that resonates with your core audience.",
-                "Strategic Art Direction for a consistent and premium visual language.",
-                "Complete Brand Identity systems (Logos, Typography, Color Palettes).",
-                "High-end marketing collateral that commands attention."
+                "Custom Logo Design that defines your identity.",
+                "Corporate Identity systems for consistent branding.",
+                "Business Cards/Pamphlets that impress offline.",
+                "Social Media Styling for a premium online look."
             ]}
             caseStudies={[
                 {
                     title: "Premium Real Estate Brand",
                     description: "Developed a luxury visual identity that increased qualified inbound inquiries by 75%.",
-                    result: "75% Increase in High-Value Leads",
+                    result: "75% More Leads",
                     category: "Identity"
                 },
                 {
                     title: "Tech Unicorn Rebrand",
-                    description: "Redefined the visual narrative for a scaling startup, aligning their image with market leadership.",
-                    result: "Global Recognition & Trust",
+                    description: "Redefined the visual narrative for a scaling startup.",
+                    result: "Global Recognition",
                     category: "Storytelling"
                 }
             ]}
-            ctaTitle="Tell your story with impact."
+            ctaTitle="Ready to stand out?"
             ctaDescription="Elevate your brand with art direction that captures the essence of your business."
+            howItWorks={[
+                { title: "Briefing", description: "You tell us your vision and company values." },
+                { title: "Concept", description: "We provide multiple professional design directions." },
+                { title: "Delivery", description: "You receive a complete 'Brand Kit' ready for print and digital." }
+            ]}
+            process={[
+                { title: "The Strategy Call", description: "A simple 20-minute chat to understand your goals." },
+                { title: "The Growth Plan", description: "We send you a clear, jargon-free proposal." },
+                { title: "Kick-Off", description: "Our team begins the design phase while you track progress." }
+            ]}
+            faqs={[
+                { question: "Can you refresh my old logo?", answer: "Yes, we can modernize existing brands while keeping their heritage." },
+                { question: "Do I get the high-resolution files?", answer: "You receive all source files (vector, print, web) upon completion." },
+                { question: "How long does design take?", answer: "Depending on scope, typically 1-2 weeks for initial concepts." }
+            ]}
         >
             <Breadcrumbs
                 items={[
                     { label: 'Services', href: '/#services' },
-                    { label: 'Branding & Design', href: '/services/branding-and-design', current: true }
+                    { label: 'Branding', href: '/services/branding-and-design', current: true }
                 ]}
             />
         </ServicePageLayout>

@@ -13,36 +13,51 @@ export const metadata: Metadata = {
 export default function PerformanceMarketingPage() {
     return (
         <ServicePageLayout
-            title="Digital Marketing"
-            subtitle="Social Media & PPC Advertising"
-            description="Boost your business with targeted PPC Advertising campaigns and Social Media Management that drive traffic, grow your audience, and build lasting brand visibility."
+            title="Digital Marketing & Sales Velocity"
+            subtitle="Stop Boosting, Start Converting"
+            description="Stop 'boosting posts' and start generating leads. We use Google and Meta to find people who are ready to buy right now."
             useCases={[
-                "Strategic Demand Gen to fill your pipeline with qualified leads.",
-                "Aggressive Conversion Rate Optimization (CRO) to maximize spend.",
-                "Data-driven PPC campaigns across Search, Social, and Display.",
-                "Real-time ROI tracking and performance attribution models."
+                "Google Search Ads targeting high-intent buyers.",
+                "Facebook/Instagram Lead Generation campaigns.",
+                "Social Media Growth strategies.",
+                "Direct Email Marketing automation."
             ]}
             caseStudies={[
                 {
                     title: "B2B Lead Gen Campaign",
-                    description: "Implemented a full-funnel Demand Gen strategy for a tech provider, reducing CPL by 35%.",
-                    result: "35% Reduction in Cost-Per-Lead",
+                    description: "Implemented a full-funnel Demand Gen strategy, reducing CPL by 35%.",
+                    result: "35% Lower CPL",
                     category: "Efficiency"
                 },
                 {
                     title: "Retail Social Growth",
-                    description: "Scaled a lifestyle brand's social presence and ad spend, maintaining a 4.5x ROAS.",
-                    result: "4.5x Return on Ad Spend",
+                    description: "Scaled a lifestyle brand's social presence with 4.5x ROAS.",
+                    result: "4.5x ROAS",
                     category: "Growth"
                 }
             ]}
-            ctaTitle="Ready for maximum ROI?"
-            ctaDescription="Stop guessing and start growing with lead generation strategies that actually convert."
+            ctaTitle="Ready for leads that convert?"
+            ctaDescription="Stop guessing and start growing with data-driven campaigns."
+            howItWorks={[
+                { title: "Targeting", description: "We identify your ideal customer’s habits and digital footprint." },
+                { title: "Launch", description: "We run high-performing ads across optimal channels." },
+                { title: "Optimization", description: "We tweak ads daily to ensure the lowest cost per lead." }
+            ]}
+            process={[
+                { title: "The Strategy Call", description: "A simple 20-minute chat to understand your goals." },
+                { title: "The Growth Plan", description: "We send you a clear, jargon-free proposal." },
+                { title: "Kick-Off", description: "Our team begins the campaign while you track progress via dashboard." }
+            ]}
+            faqs={[
+                { question: "How much should I spend on ads?", answer: "We recommend a budget based on your industry and goals to ensure ROI." },
+                { question: "How long until I see leads?", answer: "PPC can show results instantly, while SEO and social compounding takes time." },
+                { question: "Do I own my ad accounts?", answer: "Yes, you retain full ownership and transparency of all accounts." }
+            ]}
         >
             <Breadcrumbs
                 items={[
                     { label: 'Services', href: '/#services' },
-                    { label: 'Performance Marketing', href: '/services/performance-marketing', current: true }
+                    { label: 'Digital Marketing', href: '/services/performance-marketing', current: true }
                 ]}
             />
         </ServicePageLayout>

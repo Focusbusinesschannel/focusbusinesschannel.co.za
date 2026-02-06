@@ -21,6 +21,9 @@ interface ServicePageLayoutProps {
     ctaTitle: string;
     ctaDescription: string;
     children?: React.ReactNode;
+    howItWorks: { title: string; description: string }[];
+    process: { title: string; description: string }[];
+    faqs: { question: string; answer: string }[];
 }
 
 export default function ServicePageLayout({
@@ -31,7 +34,10 @@ export default function ServicePageLayout({
     caseStudies,
     ctaTitle,
     ctaDescription,
-    children
+    children,
+    howItWorks,
+    process,
+    faqs
 }: ServicePageLayoutProps) {
     return (
         <div className="min-h-screen bg-background text-white font-sans selection:bg-accent selection:text-white">
@@ -132,33 +138,89 @@ export default function ServicePageLayout({
                 </div>
             </section>
 
-            {/* Booking / CTA Section */}
-            <section className="py-32 relative overflow-hidden">
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-accent/10 blur-[120px] -z-10" />
-                <div className="container mx-auto px-6 text-center max-w-4xl">
-                    <h2 className="text-4xl md:text-6xl font-display font-bold mb-8">
-                        {ctaTitle}
-                    </h2>
-                    <p className="text-xl text-gray-400 mb-12">
-                        {ctaDescription}
-                    </p>
-                    <Link
-                        href="/#contact"
-                        className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black text-lg font-bold rounded-full hover:bg-accent hover:text-white transition-all duration-300 group"
-                    >
-                        <Calendar size={20} />
-                        Book a Strategy Session
-                        <ArrowLeft size={20} className="rotate-180 group-hover:translate-x-2 transition-transform" />
-                    </Link>
-                </div>
-            </section>
+        </section>
 
-            {/* Footer link */}
-            <footer className="py-12 border-t border-white/5">
-                <div className="container mx-auto px-6 text-center text-gray-500 text-sm">
-                    &copy; {new Date().getFullYear()} Focus Business Channel. All rights reserved.
-                </div>
-            </footer>
+            {/* How It Works Section */ }
+    <section className="py-24 bg-surface/50 border-y border-white/5">
+        <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-display font-bold mb-16 text-center">How It Works</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+                {howItWorks.map((step, index) => (
+                    <div key={index} className="relative p-8 rounded-2xl bg-background border border-white/10">
+                        <span className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-accent flex items-center justify-center text-white font-bold text-lg">
+                            {index + 1}
+                        </span>
+                        <h3 className="text-xl font-bold mb-4 mt-2">{step.title}</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
+                    </div>
+                ))}
+            </div>
         </div>
+    </section>
+
+    {/* Onboarding Process */ }
+    <section className="py-24">
+        <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center mb-16">
+                <h2 className="text-4xl font-display font-bold mb-6">Simple Onboarding</h2>
+                <p className="text-gray-400">Your journey to growth in three simple steps.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+                {process.map((step, index) => (
+                    <div key={index} className="text-center group">
+                        <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-2xl font-display font-bold group-hover:bg-accent group-hover:border-accent transition-all duration-300">
+                            {index + 1}
+                        </div>
+                        <h3 className="text-lg font-bold mb-3">{step.title}</h3>
+                        <p className="text-gray-400 text-sm">{step.description}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    {/* FAQs */ }
+    <section className="py-24 bg-surface border-y border-white/5">
+        <div className="container mx-auto px-6 max-w-4xl">
+            <h2 className="text-4xl font-display font-bold mb-16 text-center">Common Questions</h2>
+            <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                    <div key={index} className="p-6 rounded-xl bg-background border border-white/5 hover:border-white/10 transition-colors">
+                        <h3 className="text-lg font-bold mb-2 text-white">{faq.question}</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    {/* Booking / CTA Section */ }
+    <section className="py-32 relative overflow-hidden">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-accent/10 blur-[120px] -z-10" />
+        <div className="container mx-auto px-6 text-center max-w-4xl">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-8">
+                {ctaTitle}
+            </h2>
+            <p className="text-xl text-gray-400 mb-12">
+                {ctaDescription}
+            </p>
+            <Link
+                href="/#contact"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black text-lg font-bold rounded-full hover:bg-accent hover:text-white transition-all duration-300 group"
+            >
+                <Calendar size={20} />
+                Book a Strategy Session
+                <ArrowLeft size={20} className="rotate-180 group-hover:translate-x-2 transition-transform" />
+            </Link>
+        </div>
+    </section>
+
+    {/* Footer link */ }
+    <footer className="py-12 border-t border-white/5">
+        <div className="container mx-auto px-6 text-center text-gray-500 text-sm">
+            &copy; {new Date().getFullYear()} Focus Business Channel. All rights reserved.
+        </div>
+    </footer>
+        </div >
     );
 }
