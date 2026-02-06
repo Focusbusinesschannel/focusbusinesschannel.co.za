@@ -17,10 +17,22 @@ export default function WebDevelopmentPage() {
             subtitle="Trusted by Humans, Recommended by AI"
             description="We don't just build websites; we build digital storefronts that rank on Google and answer AI queries. We ensure you are the most trusted source in your industry."
             useCases={[
-                "Professional Website Design that captures your brand essence.",
-                "Mobile Optimization ensuring perfect performance on every device.",
-                "Speed Tuning for instant load times.",
-                "AI-Ready Search (AEO) to dominate upcoming search trends."
+                {
+                    title: "Professional Website Design",
+                    description: "We don't use templates. We build custom-coded digital storefronts that capture your brand essence and convert visitors into loyal customers with pixel-perfect precision."
+                },
+                {
+                    title: "Mobile Optimization",
+                    description: "Responsive architecture ensuring a flawless experience on every device. Whether your customer is on an iPhone or a 4K desktop, your site will look and perform beautifully."
+                },
+                {
+                    title: "Speed Tuning",
+                    description: "Sub-second load times that keep impatience at bay. We optimize every asset and line of code to improve your Google Core Web Vitals score."
+                },
+                {
+                    title: "AI-Ready Search (AEO)",
+                    description: "Future-proof your visibility. We use structured data and semantic HTML that helps AI models like ChatGPT and Gemini understand and recommend your business first."
+                }
             ]}
             caseStudies={[
                 {

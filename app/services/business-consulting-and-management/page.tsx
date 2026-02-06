@@ -17,10 +17,22 @@ export default function BusinessConsultingPage() {
             subtitle="Foundation of Scaling"
             description="Clean books and legal compliance are the foundation of scaling. We handle the paperwork so you can handle the growth."
             useCases={[
-                "Business Registration and CIPC compliance.",
-                "SARS/Tax Compliance management.",
-                "Monthly Accounting and bookkeeping.",
-                "Admin Support for seamless operations."
+                {
+                    title: "Business Registration (CIPC)",
+                    description: "Start on solid ground. We handle all CIPC processes to ensure your company is legally registered and compliant from day one."
+                },
+                {
+                    title: "Tax & SARS Compliance",
+                    description: "Avoid penalties and stress. We manage your tax submissions and SARS correspondence so you can focus on revenue."
+                },
+                {
+                    title: "Monthly Accounting",
+                    description: "Make data-driven decisions. We provide accurate monthly financial statements that help you track growth and manage cash flow."
+                },
+                {
+                    title: "Admin Support",
+                    description: "Delegate the paperwork. Our remote admin support handles the day-to-day filing and organization that usually bogs down founders."
+                }
             ]}
             caseStudies={[
                 {

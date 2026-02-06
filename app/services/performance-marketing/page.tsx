@@ -17,10 +17,22 @@ export default function PerformanceMarketingPage() {
             subtitle="Stop Boosting, Start Converting"
             description="Stop 'boosting posts' and start generating leads. We use Google and Meta to find people who are ready to buy right now."
             useCases={[
-                "Google Search Ads targeting high-intent buyers.",
-                "Facebook/Instagram Lead Generation campaigns.",
-                "Social Media Growth strategies.",
-                "Direct Email Marketing automation."
+                {
+                    title: "Google Search Ads",
+                    description: "Capture high-intent buyers exactly when they are searching for what you offer. We optimize for high ROAS and low wasted spend."
+                },
+                {
+                    title: "Facebook & Instagram Ads",
+                    description: "Stop relying on organic reach. We use precise targeting to put your brand in front of your ideal customer, generating leads on autopilot."
+                },
+                {
+                    title: "Social Media Growth",
+                    description: "Build a loyal community. We create engaging content strategies that turn passive followers into active brand advocates."
+                },
+                {
+                    title: "Email Marketing Automation",
+                    description: "Nurture your leads while you sleep. We build automated flows that welcome new subscribers and recover lost sales."
+                }
             ]}
             caseStudies={[
                 {

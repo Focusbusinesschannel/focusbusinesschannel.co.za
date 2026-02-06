@@ -17,10 +17,22 @@ export default function BrandingAndDesignPage() {
             subtitle="Look Like The Leader You Are"
             description="Look like the market leader you are. We create professional visuals that build instant trust with your customers."
             useCases={[
-                "Custom Logo Design that defines your identity.",
-                "Corporate Identity systems for consistent branding.",
-                "Business Cards/Pamphlets that impress offline.",
-                "Social Media Styling for a premium online look."
+                {
+                    title: "Custom Logo Design",
+                    description: "Available for trademarking, our logos are unique marks that serve as the cornerstone of your brand identity."
+                },
+                {
+                    title: "Corporate Identity",
+                    description: "Consistency builds trust. We design your letterheads, email signatures, and presentation templates to ensure a cohesive professional look."
+                },
+                {
+                    title: "Marketing Materials",
+                    description: "From business cards to brochures, we design physical assets that make a lasting impression at every networking opportunity."
+                },
+                {
+                    title: "Social Identity Design",
+                    description: "Stand out in the feed. We create a visual language for your social channels that makes your brand instantly recognizable."
+                }
             ]}
             caseStudies={[
                 {

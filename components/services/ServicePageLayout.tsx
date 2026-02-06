@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import BookingForm from '../ui/BookingForm';
 
 interface CaseStudy {
     title: string;
@@ -16,7 +17,7 @@ interface ServicePageLayoutProps {
     title: string;
     subtitle: string;
     description: string;
-    useCases: string[];
+    useCases: { title: string; description: string }[];
     caseStudies: CaseStudy[];
     ctaTitle: string;
     ctaDescription: string;
@@ -87,29 +88,28 @@ export default function ServicePageLayout({
                     <div className="grid md:grid-cols-2 gap-16 items-start">
                         <div>
                             <h2 className="text-3xl font-display font-bold mb-8">The 360 Approach</h2>
-                            <div className="space-y-6">
+                            <div className="space-y-8">
                                 {useCases.map((useCase, index) => (
                                     <motion.div
                                         key={index}
                                         initial={{ opacity: 0, x: -20 }}
                                         whileInView={{ opacity: 1, x: 0 }}
                                         transition={{ delay: index * 0.1 }}
-                                        className="flex items-start gap-4"
+                                        className="flex items-start gap-4 group"
                                     >
-                                        <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent shrink-0 mt-1">
-                                            <ChevronRight size={14} />
+                                        <div className="w-8 h-8 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-accent shrink-0 mt-1 group-hover:bg-accent group-hover:text-white transition-colors">
+                                            <ChevronRight size={16} />
                                         </div>
-                                        <p className="text-gray-300 text-lg leading-snug">{useCase}</p>
+                                        <div>
+                                            <h3 className="text-xl font-bold text-white mb-2">{useCase.title}</h3>
+                                            <p className="text-gray-400 text-base leading-relaxed">{useCase.description}</p>
+                                        </div>
                                     </motion.div>
                                 ))}
                             </div>
                         </div>
-                        <div className="aspect-[4/5] bg-gradient-to-br from-white/10 to-white/5 rounded-2xl border border-white/10 p-8 flex flex-col justify-end group overflow-hidden relative">
-                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(var(--accent-rgb),0.1),transparent)]" />
-                            <h3 className="text-2xl font-display font-medium mb-4 relative z-10">Editorial Strategy</h3>
-                            <p className="text-gray-400 relative z-10">
-                                We don't just provide a service; we author your brand's narrative through technical excellence and strategic insight.
-                            </p>
+                        <div className="h-full">
+                            <BookingForm />
                         </div>
                     </div>
                 </div>
