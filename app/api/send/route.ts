@@ -1,10 +1,8 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import { PrismaClient } from '@prisma/client';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const prisma = new PrismaClient();
 
 // Schema Definition
 const contactFormSchema = z.object({
@@ -66,20 +64,7 @@ export async function POST(request: Request) {
             return NextResponse.json({ data: { id: 'mock-success' } });
         }
 
-        // 4. Data Persistence (Prisma)
-        try {
-            await prisma.contactSubmission.create({
-                data: {
-                    name,
-                    email,
-                    subject,
-                    message
-                }
-            });
-        } catch (dbError) {
-            console.error('Failed to save to database:', dbError);
-            // Non-blocking: continue to send email even if DB fails
-        }
+        // 4. Send Email (Resend)
 
         const { data, error } = await resend.emails.send({
             from: 'Focus Contact Form <info@focusbusinesschannel.co.za>',
