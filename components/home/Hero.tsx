@@ -62,9 +62,9 @@ export default function Hero() {
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-8xl 3xl:text-9xl font-display font-bold leading-tight tracking-tight text-heading m-0"
+                                className="text-3xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl 3xl:text-8xl font-display font-bold leading-tight tracking-tight m-0"
                             >
-                                We Generate Qualified Leads for Growing Businesses
+                                <span className="text-gradient-purple-red">We Generate Qualified Leads for Growing Businesses</span>
                             </motion.h1>
                         </div>
 
