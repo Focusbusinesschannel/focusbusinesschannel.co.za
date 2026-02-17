@@ -20,38 +20,18 @@ export default function AboutSection() {
                     </div>
                 </div>
 
-                {/* Who We Help - Checkboard style or List */}
+                {/* Who We Are - Simplified */}
                 <div className="relative flex items-center">
                     <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-accent/10 to-transparent opacity-30 blur-3xl" />
 
                     <div className="relative z-10 glass-panel p-8 md:p-10 lg:p-12 3xl:p-20 rounded-2xl w-full">
-                        <h3 className="text-2xl md:text-3xl 3xl:text-4xl font-display font-bold text-heading mb-8">Direct Growth Solutions</h3>
-                        <ul className="space-y-6">
-                            {[
-                                { q: "Our leads aren't turning into sales.", a: "We bridge the gap so your team only talks to people ready to buy." },
-                                { q: "We rely too much on one platform.", a: "We spread your presence so one algorithm change doesn't stop your phone ringing." },
-                                { q: "We are the industry's best-kept secret.", a: "We build a reputation engine that makes you the most recognized name." },
-                                { q: "I don't know if my marketing is working.", a: "We provide simple reports showing exactly how much profit you made." }
-                            ].map((item, i) => (
-                                <li key={i} className="flex flex-col gap-1">
-                                    <span className="text-[#ea2528] font-bold text-sm md:text-base italic">"{item.q}"</span>
-                                    <span className="text-gray-400 text-sm md:text-base">{item.a}</span>
-                                </li>
-                            ))}
-                        </ul>
-
-                        <div className="mt-12 pt-8 border-t border-white/5">
-                            <div className="flex gap-8 lg:gap-12">
-                                <div>
-                                    <span className="block text-3xl md:text-4xl 3xl:text-5xl font-bold text-white">60%</span>
-                                    <span className="text-sm md:text-base text-gray-500">First Month Growth</span>
-                                </div>
-                                <div>
-                                    <span className="block text-3xl md:text-4xl 3xl:text-5xl font-bold text-white">1M+</span>
-                                    <span className="text-sm md:text-base text-gray-500">Verified Leads</span>
-                                </div>
-                            </div>
-                        </div>
+                        <h3 className="text-2xl md:text-3xl 3xl:text-4xl font-display font-bold text-heading mb-6">Why Choose Focus Business Channel?</h3>
+                        <p className="text-foreground/80 text-base md:text-lg 3xl:text-xl leading-relaxed mb-8">
+                            Unlike fragmented agencies that specialize in just one area, we're your all-in-one growth partner. From web design and Google Ads to business consulting and compliance, we ensure every piece of your business works together to drive sustainable growth.
+                        </p>
+                        <p className="text-foreground/80 text-base md:text-lg 3xl:text-xl leading-relaxed">
+                            No more juggling multiple vendors. No more communication gaps. Just one team, one vision, and measurable results.
+                        </p>
                     </div>
                 </div>
 
