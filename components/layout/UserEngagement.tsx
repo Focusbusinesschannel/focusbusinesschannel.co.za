@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, MessageSquare, Send, Mail, Bell } from 'lucide-react';
+import { X, MessageSquare, Send, Mail, Bell, Loader2 } from 'lucide-react';
 
 export default function UserEngagement() {
     const pathname = usePathname();
@@ -13,6 +13,8 @@ export default function UserEngagement() {
     const [showNewsletter, setShowNewsletter] = useState(false);
     const [isChatOpen, setIsChatOpen] = useState(false);
     const [hasExited, setHasExited] = useState(false);
+    const [exitFormData, setExitFormData] = useState({ name: '', email: '' });
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     useEffect(() => {
         // Exit-Intent Logic
@@ -52,25 +54,46 @@ export default function UserEngagement() {
         };
     }, [pathname, hasExited]);
 
-    const handleExitCapture = (e: React.FormEvent) => {
+    const handleExitCapture = async (e: React.FormEvent) => {
         e.preventDefault();
-        setIsExitSuccess(true);
+        setIsSubmitting(true);
 
-        // Mark as permanently converted so it never shows again
-        localStorage.setItem('convertedUser', 'true');
+        try {
+            // Send lead to API
+            await fetch('/api/send', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ...exitFormData,
+                    subject: 'Lead Magnet Download: Growth Framework',
+                    message: `User downloaded the Growth Framework guide.`
+                }),
+            });
 
-        // Automatic download
-        const link = document.createElement('a');
-        link.href = '/growth-framework.txt';
-        link.download = 'focus-growth-framework.txt';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+            setIsExitSuccess(true);
 
-        // Close after a delay
-        setTimeout(() => {
-            setShowExitPopup(false);
-        }, 3000);
+            // Mark as permanently converted
+            localStorage.setItem('convertedUser', 'true');
+
+            // Automatic download
+            const link = document.createElement('a');
+            link.href = '/growth-framework.txt';
+            link.download = 'focus-growth-framework.txt';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            // Close after a delay
+            setTimeout(() => {
+                setShowExitPopup(false);
+            }, 3000);
+        } catch (error) {
+            console.error('Lead capture failed:', error);
+            // Still show success to user to not block download, but log error
+            setIsExitSuccess(true);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -151,21 +174,30 @@ export default function UserEngagement() {
                                             <input
                                                 type="text"
                                                 placeholder="Your Name"
+                                                value={exitFormData.name}
+                                                onChange={(e) => setExitFormData({ ...exitFormData, name: e.target.value })}
                                                 className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-foreground focus:border-accent outline-none"
                                                 required
                                             />
                                             <input
                                                 type="email"
                                                 placeholder="Work Email"
+                                                value={exitFormData.email}
+                                                onChange={(e) => setExitFormData({ ...exitFormData, email: e.target.value })}
                                                 className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-foreground focus:border-accent outline-none"
                                                 required
                                             />
                                         </div>
                                         <button
                                             type="submit"
-                                            className="w-full py-4 bg-accent text-white font-bold rounded-xl hover:opacity-90 transition-all"
+                                            disabled={isSubmitting}
+                                            className="w-full py-4 bg-accent text-white font-bold rounded-xl hover:opacity-90 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
                                         >
-                                            Get My Copy Now
+                                            {isSubmitting ? (
+                                                <>Processing... <Loader2 className="animate-spin" size={20} /></>
+                                            ) : (
+                                                'Get My Copy Now'
+                                            )}
                                         </button>
                                     </motion.form>
                                 ) : (
@@ -210,7 +242,28 @@ export default function UserEngagement() {
                             <p className="text-sm text-foreground/80 mb-4">
                                 Get weekly editorial insights on technology and growth delivered to your inbox.
                             </p>
-                            <form className="flex gap-2" onSubmit={(e) => { e.preventDefault(); setShowNewsletter(false); }}>
+                            <form
+                                className="flex gap-2"
+                                onSubmit={async (e) => {
+                                    e.preventDefault();
+                                    const email = (e.currentTarget.elements[0] as HTMLInputElement).value;
+                                    try {
+                                        await fetch('/api/send', {
+                                            method: 'POST',
+                                            headers: { 'Content-Type': 'application/json' },
+                                            body: JSON.stringify({
+                                                name: 'Newsletter Subscriber',
+                                                email: email,
+                                                subject: 'Newsletter Subscription',
+                                                message: 'User subscribed to the Focus Newsletter via the blog popup.'
+                                            }),
+                                        });
+                                    } catch (err) {
+                                        console.error('Newsletter sub failed:', err);
+                                    }
+                                    setShowNewsletter(false);
+                                }}
+                            >
                                 <input
                                     type="email"
                                     placeholder="Enter email"
