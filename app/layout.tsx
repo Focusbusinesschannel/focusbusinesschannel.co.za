@@ -56,7 +56,16 @@ export default function RootLayout({
                             'logo': 'https://focusbusinesschannel.co.za/logo.png',
                             'address': {
                                 '@type': 'PostalAddress',
-                                'addressLocality': 'Germiston'
+                                'streetAddress': 'Germiston',
+                                'addressLocality': 'Germiston',
+                                'addressRegion': 'Gauteng',
+                                'postalCode': '1401',
+                                'addressCountry': 'ZA'
+                            },
+                            'geo': {
+                                '@type': 'GeoCoordinates',
+                                'latitude': '-26.2271',
+                                'longitude': '28.1670'
                             },
                             'aggregateRating': {
                                 '@type': 'AggregateRating',
