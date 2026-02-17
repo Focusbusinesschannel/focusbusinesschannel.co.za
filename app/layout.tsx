@@ -45,6 +45,12 @@ export default function RootLayout({
         <html lang="en" className={`${inter.variable} ${outfit.variable}`} suppressHydrationWarning>
             <head>
                 <script
+                    id="theme-initializer"
+                    dangerouslySetInnerHTML={{
+                        __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');document.documentElement.setAttribute('data-theme','dark')}else{document.documentElement.classList.remove('dark');document.documentElement.setAttribute('data-theme','light')}}catch(e){}})()`
+                    }}
+                />
+                <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
                         __html: JSON.stringify({
@@ -79,7 +85,7 @@ export default function RootLayout({
                     }}
                 />
             </head>
-            <body className="min-h-screen flex flex-col pt-0">
+            <body className="min-h-screen flex flex-col pt-0" suppressHydrationWarning>
                 <ThemeProvider>
                     <Header />
                     <main className="flex-grow">
