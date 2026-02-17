@@ -34,7 +34,7 @@ export default function AboutSection() {
                                 { q: "I don't know if my marketing is working.", a: "We provide simple reports showing exactly how much profit you made." }
                             ].map((item, i) => (
                                 <li key={i} className="flex flex-col gap-1">
-                                    <span className="text-white font-bold text-sm md:text-base italic">"{item.q}"</span>
+                                    <span className="text-[#ea2528] font-bold text-sm md:text-base italic">"{item.q}"</span>
                                     <span className="text-gray-400 text-sm md:text-base">{item.a}</span>
                                 </li>
                             ))}
