@@ -13,9 +13,9 @@ export default function Hero() {
         offset: ["start start", "end end"]
     });
 
-    const frameCount = 15;
+    const frameCount = 45;
     const images = Array.from({ length: frameCount }, (_, i) =>
-        `/frames/ezgif-frame-${(i + 1).toString().padStart(3, '0')}.jpg`
+        `/ezgif-clear/frame-${(i + 1).toString().padStart(3, '0')}.png`
     );
 
     // Smooth out the scroll progress for the animation
