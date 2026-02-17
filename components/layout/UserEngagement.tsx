@@ -17,9 +17,18 @@ export default function UserEngagement() {
     useEffect(() => {
         // Exit-Intent Logic
         const handleMouseLeave = (e: MouseEvent) => {
-            if (e.clientY <= 0 && !hasExited) {
+            // Only show on home page
+            if (pathname !== '/') return;
+
+            // Check if already converted (localStorage) or seen in this session (sessionStorage)
+            const converted = localStorage.getItem('convertedUser');
+            const seenThisSession = sessionStorage.getItem('exitPopupSeen');
+
+            if (e.clientY <= 0 && !hasExited && !converted && !seenThisSession) {
                 setShowExitPopup(true);
                 setHasExited(true);
+                // Mark as seen for this session immediately when it shows
+                sessionStorage.setItem('exitPopupSeen', 'true');
             }
         };
 
@@ -46,6 +55,9 @@ export default function UserEngagement() {
     const handleExitCapture = (e: React.FormEvent) => {
         e.preventDefault();
         setIsExitSuccess(true);
+
+        // Mark as permanently converted so it never shows again
+        localStorage.setItem('convertedUser', 'true');
 
         // Automatic download
         const link = document.createElement('a');
@@ -75,7 +87,13 @@ export default function UserEngagement() {
                             className="bg-surface border border-black/10 dark:border-white/10 p-8 md:p-12 rounded-3xl max-w-lg w-full relative overflow-hidden shadow-2xl"
                         >
                             <div className="absolute top-0 right-0 p-4">
-                                <button onClick={() => setShowExitPopup(false)} className="text-secondary hover:text-heading transition-colors">
+                                <button
+                                    onClick={() => {
+                                        setShowExitPopup(false);
+                                        sessionStorage.setItem('exitPopupSeen', 'true');
+                                    }}
+                                    className="text-secondary hover:text-heading transition-colors"
+                                >
                                     <X size={24} />
                                 </button>
                             </div>
@@ -102,7 +120,13 @@ export default function UserEngagement() {
                                             >
                                                 Download Guide
                                             </button>
-                                            <button onClick={() => setShowExitPopup(false)} className="text-secondary text-sm hover:text-heading underline transition-colors">
+                                            <button
+                                                onClick={() => {
+                                                    setShowExitPopup(false);
+                                                    sessionStorage.setItem('exitPopupSeen', 'true');
+                                                }}
+                                                className="text-secondary text-sm hover:text-heading underline transition-colors"
+                                            >
                                                 Maybe later
                                             </button>
                                         </div>
