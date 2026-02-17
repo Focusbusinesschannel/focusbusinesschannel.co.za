@@ -40,7 +40,7 @@ export default function BlogSection() {
                             className="group"
                         >
                             <Link href={`/blog/${post.slug}`} className="block">
-                                <div className="aspect-[16/9] relative rounded-2xl overflow-hidden mb-6 bg-surface border border-black/10 dark:border-white/5">
+                                <div className="aspect-[16/9] relative rounded-2xl overflow-hidden mb-6 bg-surface border border-black/10 dark:border-white/10">
                                     <Image
                                         src={post.image}
                                         alt={post.title}
@@ -48,7 +48,7 @@ export default function BlogSection() {
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
                                     <div className="absolute top-4 left-4">
-                                        <span className="px-3 py-1 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold rounded-full border border-white/10 uppercase tracking-wider">
+                                        <span className="px-3 py-1 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold rounded-full border border-black/10 dark:border-white/10 uppercase tracking-wider">
                                             {post.category}
                                         </span>
                                     </div>

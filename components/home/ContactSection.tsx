@@ -139,13 +139,13 @@ export default function ContactSection() {
                                     <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center text-accent mb-6">
                                         <CheckCircle size={40} />
                                     </div>
-                                    <h3 className="text-3xl font-display font-bold text-white mb-4">Message Sent!</h3>
+                                    <h3 className="text-3xl font-display font-bold text-heading mb-4">Message Sent!</h3>
                                     <p className="text-gray-400 mb-8">
                                         Thank you for reaching out. Our team will get back to you within 24 hours.
                                     </p>
                                     <button
                                         onClick={() => setStatus('idle')}
-                                        className="px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-all"
+                                        className="px-8 py-3 bg-heading text-white font-bold rounded-full hover:opacity-90 transition-all"
                                     >
                                         Send Another Message
                                     </button>
@@ -219,7 +219,7 @@ export default function ContactSection() {
                                     <button
                                         type="submit"
                                         disabled={status === 'submitting'}
-                                        className="w-full py-4 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition-all flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="w-full py-4 bg-heading text-white font-bold rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {status === 'submitting' ? (
                                             <>Submitting... <Loader2 className="animate-spin" size={18} /></>

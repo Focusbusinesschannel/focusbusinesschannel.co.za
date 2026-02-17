@@ -69,8 +69,8 @@ export default function Header() {
                 }`}
         >
             <div className="container mx-auto px-6 md:px-10 xl:px-20 3xl:max-w-screen-2xl flex items-center justify-between">
-                <div className="flex items-center gap-6">
-                    <Link href="/" className="z-50 flex items-center" aria-label="Focus Home">
+                <div className="flex items-center gap-4 md:gap-8">
+                    <Link href="/" className="flex items-center" aria-label="Focus Home">
                         <div className="relative h-10 w-24 md:h-12 md:w-32 lg:h-14 lg:w-36 3xl:h-16 3xl:w-40">
                             <Image
                                 src="/images/logo.png"
@@ -81,7 +81,9 @@ export default function Header() {
                             />
                         </div>
                     </Link>
-                    <ThemeToggle />
+                    <div className="flex items-center">
+                        <ThemeToggle />
+                    </div>
                 </div>
 
                 {/* Desktop Nav */}

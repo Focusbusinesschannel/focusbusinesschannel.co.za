@@ -88,7 +88,7 @@ export default function ServicePageLayout({
 
             {/* Why It Matters Section */}
             {whyItMatters && (
-                <section className="py-20 md:py-24 bg-background border-b border-white/5">
+                <section className="py-20 md:py-24 bg-background border-y border-black/10 dark:border-white/5">
                     <div className="container mx-auto px-6 max-w-5xl">
                         <div className="text-center mb-12">
                             <span className="text-accent text-sm font-bold tracking-widest uppercase mb-4 block">Business Impact</span>
@@ -102,7 +102,7 @@ export default function ServicePageLayout({
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.1 }}
                                     viewport={{ once: true }}
-                                    className="flex items-start gap-3 p-6 bg-surface/50 border border-white/5 rounded-xl hover:border-accent/30 transition-colors"
+                                    className="flex items-start gap-3 p-6 bg-surface/50 border border-black/10 dark:border-white/5 rounded-xl hover:border-accent/30 transition-colors"
                                 >
                                     <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
                                     <p className="text-foreground/80 text-sm md:text-base leading-relaxed">{point}</p>
@@ -175,7 +175,7 @@ export default function ServicePageLayout({
                     <h2 className="text-4xl font-display font-bold mb-16 text-center">How It Works</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         {howItWorks.map((step, index) => (
-                            <div key={index} className="relative p-8 rounded-2xl bg-background border border-white/10">
+                            <div key={index} className="relative p-8 rounded-2xl bg-background border border-black/10 dark:border-white/10">
                                 <span className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-accent flex items-center justify-center text-white font-bold text-lg">
                                     {index + 1}
                                 </span>
@@ -197,7 +197,7 @@ export default function ServicePageLayout({
                     <div className="grid md:grid-cols-3 gap-8">
                         {process.map((step, index) => (
                             <div key={index} className="text-center group">
-                                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-2xl font-display font-bold group-hover:bg-accent group-hover:border-accent transition-all duration-300">
+                                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center text-2xl font-display font-bold group-hover:bg-accent group-hover:border-accent transition-all duration-300">
                                     {index + 1}
                                 </div>
                                 <h3 className="text-lg font-bold mb-3">{step.title}</h3>
@@ -241,8 +241,8 @@ export default function ServicePageLayout({
                                     transition={{ delay: index * 0.15 }}
                                     viewport={{ once: true }}
                                     className={`p-8 rounded-2xl border transition-all duration-300 ${index === 1
-                                            ? 'bg-accent/5 border-accent shadow-lg scale-105'
-                                            : 'bg-surface/50 border-white/10 hover:border-accent/30'
+                                        ? 'bg-accent/5 border-accent shadow-lg scale-105'
+                                        : 'bg-surface/50 border-black/10 dark:border-white/10 hover:border-accent/30'
                                         }`}
                                 >
                                     {index === 1 && (
@@ -263,8 +263,8 @@ export default function ServicePageLayout({
                                     <Link
                                         href="/#contact"
                                         className={`block text-center py-3 rounded-lg font-bold transition-all ${index === 1
-                                                ? 'bg-accent text-white hover:bg-accent/90'
-                                                : 'bg-white/5 text-heading hover:bg-white/10'
+                                            ? 'bg-accent text-white hover:bg-accent/90'
+                                            : 'bg-black/5 dark:bg-white/5 text-heading hover:bg-black/10 dark:hover:bg-white/10'
                                             }`}
                                     >
                                         Get Started

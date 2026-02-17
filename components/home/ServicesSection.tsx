@@ -45,7 +45,7 @@ export default function ServicesSection() {
                         <Link
                             href={service.link}
                             key={service.id}
-                            className="group block relative border-b border-white/10 py-12 lg:py-16 3xl:py-20 hover:bg-white/5 transition-colors duration-500"
+                            className="group block relative border-b border-black/10 dark:border-white/10 py-12 lg:py-16 3xl:py-20 hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-500"
                         >
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 lg:gap-10 px-4">
                                 <span className="text-secondary font-mono text-lg lg:text-xl 3xl:text-2xl">{service.id}</span>

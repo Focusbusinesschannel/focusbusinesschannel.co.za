@@ -4,7 +4,7 @@ import { CheckCircle } from 'lucide-react';
 
 export default function WhoWeHelpSection() {
     return (
-        <section className="py-16 md:py-20 lg:py-24 bg-background relative overflow-hidden border-b border-white/5">
+        <section className="py-16 md:py-20 lg:py-24 bg-background relative overflow-hidden border-b border-black/10 dark:border-white/5">
             <div className="container mx-auto px-6 md:px-10 xl:px-20 3xl:max-w-screen-2xl">
 
                 {/* Trust Signals - Logos & Badges */}
@@ -66,7 +66,7 @@ export default function WhoWeHelpSection() {
                             </ul>
 
                             {/* Specific Case Study Metrics */}
-                            <div className="pt-8 border-t border-white/5">
+                            <div className="pt-8 border-t border-black/10 dark:border-white/5">
                                 <p className="text-xs uppercase tracking-widest text-secondary mb-4">Proven Results</p>
                                 <div className="grid grid-cols-2 gap-6">
                                     <div>

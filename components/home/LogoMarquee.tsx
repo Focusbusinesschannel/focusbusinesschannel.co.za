@@ -15,7 +15,7 @@ const logos = [
 
 export default function LogoMarquee() {
     return (
-        <section className="py-12 bg-black border-y border-white/5 overflow-hidden">
+        <section className="py-12 bg-background border-y border-black/10 dark:border-white/5 overflow-hidden">
             <div className="relative w-full">
                 <div className="flex w-[200%] animate-scroll hover:[animation-play-state:paused]">
                     {[...logos, ...logos, ...logos].map((logo, index) => (

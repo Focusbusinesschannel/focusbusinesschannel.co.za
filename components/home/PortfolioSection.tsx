@@ -63,7 +63,7 @@ export default function PortfolioSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="group relative overflow-hidden rounded-2xl glass-panel p-4 md:p-6 lg:p-8 hover:border-white/20 transition-all cursor-pointer h-full"
+                                className="group relative overflow-hidden rounded-2xl glass-panel p-4 md:p-6 lg:p-8 hover:border-black/20 dark:hover:border-white/20 transition-all cursor-pointer h-full"
                             >
                                 <div className="aspect-[16/9] bg-surface rounded-xl mb-6 overflow-hidden relative">
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 z-10">
