@@ -33,9 +33,9 @@ export default function ServicesSection() {
                 <div className="mb-16 lg:mb-24 border-b border-white/10 pb-8 flex flex-col md:flex-row justify-between items-end gap-6">
                     <div>
                         <span className="text-accent text-sm sm:text-base font-bold tracking-widest uppercase mb-2 block">Our Expertise</span>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl 3xl:text-7xl font-display font-bold text-white">The 360 Approach</h2>
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl 3xl:text-7xl font-display font-bold text-heading">The 360 Approach</h2>
                     </div>
-                    <p className="max-w-md text-gray-400 text-base md:text-lg lg:text-xl">
+                    <p className="max-w-md text-foreground/80 text-base md:text-lg lg:text-xl">
                         With over 6 specialized services, our approach ensures success in every business element.
                     </p>
                 </div>
@@ -48,8 +48,8 @@ export default function ServicesSection() {
                             className="group block relative border-b border-white/10 py-12 lg:py-16 3xl:py-20 hover:bg-white/5 transition-colors duration-500"
                         >
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 lg:gap-10 px-4">
-                                <span className="text-gray-500 font-mono text-lg lg:text-xl 3xl:text-2xl">{service.id}</span>
-                                <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 3xl:text-8xl font-display font-medium text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all">
+                                <span className="text-secondary font-mono text-lg lg:text-xl 3xl:text-2xl">{service.id}</span>
+                                <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 3xl:text-8xl font-display font-medium text-heading group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-heading group-hover:to-secondary transition-all">
                                     {service.title}
                                 </h3>
                                 <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300 md:ml-auto">

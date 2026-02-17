@@ -16,11 +16,11 @@ interface BreadcrumbsProps {
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
     return (
         <nav aria-label="Breadcrumb" className="flex mb-8">
-            <ol className="flex items-center space-x-2 text-sm text-gray-400">
+            <ol className="flex items-center space-x-2 text-sm text-secondary">
                 <li>
                     <Link
                         href="/"
-                        className="hover:text-white transition-colors flex items-center gap-1"
+                        className="hover:text-heading transition-colors flex items-center gap-1"
                     >
                         <Home size={14} />
                         <span className="sr-only">Home</span>
@@ -29,10 +29,10 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
 
                 {items.map((item, index) => (
                     <li key={item.href} className="flex items-center space-x-2">
-                        <ChevronRight size={14} className="text-gray-600" />
+                        <ChevronRight size={14} className="text-secondary/60" />
                         <Link
                             href={item.href}
-                            className={`hover:text-white transition-colors ${item.current ? 'text-accent font-medium' : ''
+                            className={`hover:text-heading transition-colors ${item.current ? 'text-accent font-medium' : ''
                                 }`}
                             aria-current={item.current ? 'page' : undefined}
                         >

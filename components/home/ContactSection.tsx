@@ -77,12 +77,12 @@ export default function ContactSection() {
                     {/* Contact Info */}
                     <div>
                         <span className="text-accent text-sm font-bold tracking-widest uppercase mb-4 block">Get In Touch</span>
-                        <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-8">
+                        <h2 className="text-4xl md:text-5xl font-display font-bold text-heading mb-8">
                             Ready to start your <br />
                             <span className="text-gradient">next chapter?</span>
                         </h2>
 
-                        <p className="text-gray-400 text-lg mb-12 max-w-md">
+                        <p className="text-foreground/80 text-lg mb-12 max-w-md">
                             Whether you're looking to scale or just starting out, we have the tailored strategies to help you succeed.
                         </p>
 
@@ -92,8 +92,8 @@ export default function ContactSection() {
                                     <Mail size={20} />
                                 </div>
                                 <div>
-                                    <span className="text-xs text-gray-500 uppercase font-bold tracking-widest">Email Us</span>
-                                    <p className="text-white font-medium text-lg">info@focusbusinesschannel.co.za</p>
+                                    <span className="text-xs text-secondary uppercase font-bold tracking-widest">Email Us</span>
+                                    <p className="text-foreground font-medium text-lg">info@focusbusinesschannel.co.za</p>
                                 </div>
                             </div>
 
@@ -102,8 +102,8 @@ export default function ContactSection() {
                                     <Phone size={20} />
                                 </div>
                                 <div>
-                                    <span className="text-xs text-gray-500 uppercase font-bold tracking-widest">Call Us</span>
-                                    <p className="text-white font-medium text-lg">069-699-6802</p>
+                                    <span className="text-xs text-secondary uppercase font-bold tracking-widest">Call Us</span>
+                                    <p className="text-foreground font-medium text-lg">069-699-6802</p>
                                 </div>
                             </div>
 
@@ -112,8 +112,8 @@ export default function ContactSection() {
                                     <MapPin size={20} />
                                 </div>
                                 <div>
-                                    <span className="text-xs text-gray-500 uppercase font-bold tracking-widest">Visit Us</span>
-                                    <p className="text-white font-medium text-lg">Germiston, South Africa</p>
+                                    <span className="text-xs text-secondary uppercase font-bold tracking-widest">Visit Us</span>
+                                    <p className="text-foreground font-medium text-lg">Germiston, South Africa</p>
                                 </div>
                             </div>
                         </div>
@@ -154,12 +154,12 @@ export default function ContactSection() {
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
-                                            <label className="text-sm font-medium text-gray-400">Full Name</label>
+                                            <label className="text-sm font-medium text-secondary">Full Name</label>
                                             <input
                                                 type="text"
                                                 value={formData.name}
                                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                                className={`w-full bg-white/5 border ${errors.name ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white focus:border-accent outline-none transition-colors`}
+                                                className={`w-full bg-surface/50 border ${errors.name ? 'border-red-500' : 'border-black/10 dark:border-white/10'} rounded-xl px-4 py-3 text-foreground focus:border-accent outline-none transition-colors`}
                                                 placeholder="John Doe"
                                                 aria-label="Your Full Name"
                                                 required
@@ -167,12 +167,12 @@ export default function ContactSection() {
                                             {errors.name && <p className="text-xs text-red-500">{errors.name}</p>}
                                         </div>
                                         <div className="space-y-2">
-                                            <label className="text-sm font-medium text-gray-400">Email Address</label>
+                                            <label className="text-sm font-medium text-secondary">Email Address</label>
                                             <input
                                                 type="email"
                                                 value={formData.email}
                                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                                className={`w-full bg-white/5 border ${errors.email ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white focus:border-accent outline-none transition-colors`}
+                                                className={`w-full bg-surface/50 border ${errors.email ? 'border-red-500' : 'border-black/10 dark:border-white/10'} rounded-xl px-4 py-3 text-foreground focus:border-accent outline-none transition-colors`}
                                                 placeholder="john@example.com"
                                                 aria-label="Your Email Address"
                                                 required
@@ -182,11 +182,11 @@ export default function ContactSection() {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <label className="text-sm font-medium text-gray-400">Subject</label>
+                                        <label className="text-sm font-medium text-secondary">Subject</label>
                                         <select
                                             value={formData.subject}
                                             onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent outline-none transition-colors appearance-none"
+                                            className="w-full bg-surface/50 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-foreground focus:border-accent outline-none transition-colors appearance-none"
                                             aria-label="Interest Area"
                                         >
                                             <option value="Web Design" className="bg-surface">Web Design</option>
@@ -197,11 +197,11 @@ export default function ContactSection() {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <label className="text-sm font-medium text-gray-400">Message</label>
+                                        <label className="text-sm font-medium text-secondary">Message</label>
                                         <textarea
                                             value={formData.message}
                                             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                            className={`w-full bg-white/5 border ${errors.message ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white focus:border-accent outline-none transition-colors h-32`}
+                                            className={`w-full bg-surface/50 border ${errors.message ? 'border-red-500' : 'border-black/10 dark:border-white/10'} rounded-xl px-4 py-3 text-foreground focus:border-accent outline-none transition-colors h-32`}
                                             placeholder="Tell us about your project..."
                                             aria-label="Your Message"
                                             required

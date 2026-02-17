@@ -29,11 +29,11 @@ export default function CaseStudyLayout({
     children
 }: CaseStudyLayoutProps) {
     return (
-        <div className="min-h-screen bg-background text-white font-sans selection:bg-accent selection:text-white">
+        <div className="min-h-screen bg-background text-foreground font-sans selection:bg-accent selection:text-white">
             {/* Navigation */}
             <nav className="fixed top-0 left-0 right-0 z-50 py-6 px-6 bg-gradient-to-b from-background to-transparent pointer-events-none">
                 <div className="container mx-auto flex justify-between items-center pointer-events-auto">
-                    <Link href="/#portfolio" className="flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors group">
+                    <Link href="/#portfolio" className="flex items-center gap-2 text-sm font-medium text-secondary hover:text-heading transition-colors group">
                         <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                         Back to Portfolio
                     </Link>
@@ -70,7 +70,7 @@ export default function CaseStudyLayout({
             {/* Hero Image */}
             <section className="py-12 bg-surface/50">
                 <div className="container mx-auto px-6">
-                    <div className="aspect-[16/9] bg-surface rounded-2xl overflow-hidden relative border border-white/10">
+                    <div className="aspect-[16/9] bg-surface rounded-2xl overflow-hidden relative border border-black/10 dark:border-white/10">
                         <Image
                             src={heroImage}
                             alt={title}
@@ -95,8 +95,8 @@ export default function CaseStudyLayout({
                                 className="glass-panel p-6 rounded-xl"
                             >
                                 <TrendingUp className="text-accent mb-4" size={24} />
-                                <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
-                                <div className="text-sm text-gray-400">{metric.label}</div>
+                                <div className="text-3xl font-bold text-heading mb-2">{metric.value}</div>
+                                <div className="text-sm text-secondary">{metric.label}</div>
                                 {metric.trend && (
                                     <div className="text-xs text-accent mt-2">{metric.trend}</div>
                                 )}
@@ -115,7 +115,7 @@ export default function CaseStudyLayout({
                                 <Target className="text-accent" size={28} />
                                 <h2 className="text-3xl font-display font-bold">The Challenge</h2>
                             </div>
-                            <p className="text-xl text-gray-300 leading-relaxed">
+                            <p className="text-xl text-foreground/80 leading-relaxed">
                                 {challenge}
                             </p>
                         </div>
@@ -124,7 +124,7 @@ export default function CaseStudyLayout({
                                 <CheckCircle className="text-accent" size={28} />
                                 <h2 className="text-3xl font-display font-bold">The Solution</h2>
                             </div>
-                            <p className="text-xl text-gray-300 leading-relaxed">
+                            <p className="text-xl text-foreground/80 leading-relaxed">
                                 {solution}
                             </p>
                         </div>
@@ -147,7 +147,7 @@ export default function CaseStudyLayout({
                                 className="flex items-start gap-4 glass-panel p-6 rounded-xl"
                             >
                                 <CheckCircle className="text-accent shrink-0 mt-1" size={20} />
-                                <p className="text-gray-300 text-lg">{result}</p>
+                                <p className="text-foreground/80 text-lg">{result}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -158,7 +158,7 @@ export default function CaseStudyLayout({
             {testimonial && (
                 <section className="py-24 bg-surface/50">
                     <div className="container mx-auto px-6 max-w-4xl text-center">
-                        <p className="text-2xl md:text-3xl font-display italic text-white mb-8 leading-relaxed">
+                        <p className="text-2xl md:text-3xl font-display italic text-heading mb-8 leading-relaxed">
                             "{testimonial}"
                         </p>
                         <div className="flex justify-center gap-2">
@@ -177,12 +177,12 @@ export default function CaseStudyLayout({
                     <h2 className="text-4xl md:text-6xl font-display font-bold mb-8">
                         Ready for similar results?
                     </h2>
-                    <p className="text-xl text-gray-400 mb-12">
+                    <p className="text-xl text-foreground/80 mb-12">
                         Let's discuss how we can help your business grow with the same strategic approach.
                     </p>
                     <Link
                         href="/#contact"
-                        className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black text-lg font-bold rounded-full hover:bg-accent hover:text-white transition-all duration-300"
+                        className="inline-flex items-center gap-3 px-10 py-5 bg-heading text-white text-lg font-bold rounded-full hover:bg-heading/90 transition-all duration-300"
                     >
                         Start Your Project
                         <ArrowLeft size={20} className="rotate-180" />
@@ -191,8 +191,8 @@ export default function CaseStudyLayout({
             </section>
 
             {/* Footer link */}
-            <footer className="py-12 border-t border-white/5">
-                <div className="container mx-auto px-6 text-center text-gray-500 text-sm">
+            <footer className="py-12 border-t border-black/10 dark:border-white/5">
+                <div className="container mx-auto px-6 text-center text-secondary text-sm">
                     &copy; {new Date().getFullYear()} Focus Business Channel. All rights reserved.
                 </div>
             </footer>

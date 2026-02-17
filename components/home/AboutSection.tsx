@@ -6,11 +6,11 @@ export default function AboutSection() {
                 {/* About / Mission */}
                 <div className="flex flex-col justify-center">
                     <span className="text-accent text-sm sm:text-base font-bold tracking-widest uppercase mb-6 block">Our Mission</span>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl 3xl:text-7xl font-display font-bold text-white mb-8 leading-tight">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl 3xl:text-7xl font-display font-bold text-heading mb-8 leading-tight">
                         Empowering Growth. <br />
-                        <span className="text-gray-500">Reach New Heights with Strategic Solutions.</span>
+                        <span className="text-secondary">Reach New Heights with Strategic Solutions.</span>
                     </h2>
-                    <div className="space-y-6 text-gray-400 text-lg lg:text-xl 3xl:text-2xl leading-relaxed max-w-2xl">
+                    <div className="space-y-6 text-foreground text-lg lg:text-xl 3xl:text-2xl leading-relaxed max-w-2xl">
                         <p>
                             At Focus Business Channel, we are your **Business Growth Partner**—your single point of contact for every critical business pillar under one roof.
                         </p>
@@ -25,7 +25,7 @@ export default function AboutSection() {
                     <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-accent/10 to-transparent opacity-30 blur-3xl" />
 
                     <div className="relative z-10 glass-panel p-8 md:p-10 lg:p-12 3xl:p-20 rounded-2xl w-full">
-                        <h3 className="text-2xl md:text-3xl 3xl:text-4xl font-display font-bold text-white mb-8">Direct Growth Solutions</h3>
+                        <h3 className="text-2xl md:text-3xl 3xl:text-4xl font-display font-bold text-heading mb-8">Direct Growth Solutions</h3>
                         <ul className="space-y-6">
                             {[
                                 { q: "Our leads aren't turning into sales.", a: "We bridge the gap so your team only talks to people ready to buy." },

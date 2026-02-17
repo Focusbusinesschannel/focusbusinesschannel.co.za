@@ -45,7 +45,7 @@ export default function ServicePageLayout({
             {/* Navigation */}
             <nav className="fixed top-0 left-0 right-0 z-50 py-6 px-6 bg-gradient-to-b from-background to-transparent pointer-events-none">
                 <div className="container mx-auto flex justify-between items-center pointer-events-auto">
-                    <Link href="/#services" className="flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors group">
+                    <Link href="/#services" className="flex items-center gap-2 text-sm font-medium text-secondary hover:text-heading transition-colors group">
                         <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                         Back to Services
                     </Link>
@@ -75,7 +75,7 @@ export default function ServicePageLayout({
                         <h1 className="text-5xl md:text-8xl font-display font-bold mb-8 leading-tight">
                             {title}
                         </h1>
-                        <p className="text-xl md:text-2xl text-gray-400 leading-relaxed max-w-3xl">
+                        <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed max-w-3xl">
                             {description}
                         </p>
                     </motion.div>
@@ -83,7 +83,7 @@ export default function ServicePageLayout({
             </header>
 
             {/* Approach / Use Cases */}
-            <section className="py-24 bg-surface/50 border-y border-white/5">
+            <section className="py-24 bg-surface/50 border-y border-black/10 dark:border-white/5">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-16 items-start">
                         <div>
@@ -101,8 +101,8 @@ export default function ServicePageLayout({
                                             <ChevronRight size={16} />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-white mb-2">{useCase.title}</h3>
-                                            <p className="text-gray-400 text-base leading-relaxed">{useCase.description}</p>
+                                            <h3 className="text-xl font-bold text-heading mb-2">{useCase.title}</h3>
+                                            <p className="text-foreground/80 text-base leading-relaxed">{useCase.description}</p>
                                         </div>
                                     </motion.div>
                                 ))}
@@ -124,13 +124,13 @@ export default function ServicePageLayout({
                             <motion.div
                                 key={index}
                                 whileHover={{ y: -10 }}
-                                className="p-10 bg-surface border border-white/10 rounded-2xl hover:border-accent/50 transition-all duration-500"
+                                className="p-10 bg-surface border border-black/10 dark:border-white/10 rounded-2xl hover:border-accent/50 transition-all duration-500"
                             >
                                 <span className="text-accent text-xs font-bold tracking-widest uppercase mb-4 block">{study.category}</span>
                                 <h3 className="text-2xl font-display font-bold mb-4">{study.title}</h3>
-                                <p className="text-gray-400 mb-6">{study.description}</p>
-                                <div className="pt-6 border-t border-white/10">
-                                    <span className="text-white font-mono text-xl">{study.result}</span>
+                                <p className="text-foreground/80 mb-6">{study.description}</p>
+                                <div className="pt-6 border-t border-black/10 dark:border-white/10">
+                                    <span className="text-heading font-mono text-xl">{study.result}</span>
                                 </div>
                             </motion.div>
                         ))}
@@ -178,14 +178,14 @@ export default function ServicePageLayout({
             </section>
 
             {/* FAQs */}
-            <section className="py-24 bg-surface border-y border-white/5">
+            <section className="py-24 bg-surface border-y border-black/10 dark:border-white/5">
                 <div className="container mx-auto px-6 max-w-4xl">
                     <h2 className="text-4xl font-display font-bold mb-16 text-center">Common Questions</h2>
                     <div className="space-y-4">
                         {faqs.map((faq, index) => (
-                            <div key={index} className="p-6 rounded-xl bg-background border border-white/5 hover:border-white/10 transition-colors">
-                                <h3 className="text-lg font-bold mb-2 text-white">{faq.question}</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed">{faq.answer}</p>
+                            <div key={index} className="p-6 rounded-xl bg-background border border-black/10 dark:border-white/5 hover:border-accent/30 transition-colors">
+                                <h3 className="text-lg font-bold mb-2 text-heading">{faq.question}</h3>
+                                <p className="text-foreground/80 text-sm leading-relaxed">{faq.answer}</p>
                             </div>
                         ))}
                     </div>
@@ -199,12 +199,12 @@ export default function ServicePageLayout({
                     <h2 className="text-4xl md:text-6xl font-display font-bold mb-8">
                         {ctaTitle}
                     </h2>
-                    <p className="text-xl text-gray-400 mb-12">
+                    <p className="text-xl text-foreground/80 mb-12">
                         {ctaDescription}
                     </p>
                     <Link
                         href="/#contact"
-                        className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black text-lg font-bold rounded-full hover:bg-accent hover:text-white transition-all duration-300 group"
+                        className="inline-flex items-center gap-3 px-10 py-5 bg-heading text-white text-lg font-bold rounded-full hover:bg-heading/90 transition-all duration-300 group"
                     >
                         <Calendar size={20} />
                         Book a Strategy Session
@@ -214,8 +214,8 @@ export default function ServicePageLayout({
             </section>
 
             {/* Footer link */}
-            <footer className="py-12 border-t border-white/5">
-                <div className="container mx-auto px-6 text-center text-gray-500 text-sm">
+            <footer className="py-12 border-t border-black/10 dark:border-white/5">
+                <div className="container mx-auto px-6 text-center text-secondary text-sm">
                     &copy; {new Date().getFullYear()} Focus Business Channel. All rights reserved.
                 </div>
             </footer>

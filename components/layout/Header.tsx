@@ -90,14 +90,14 @@ export default function Header() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm lg:text-base font-medium text-gray-300 hover:text-white transition-colors"
+                            className="text-sm lg:text-base font-medium text-foreground/80 hover:text-heading transition-colors"
                         >
                             {link.name}
                         </Link>
                     ))}
                     <Link
                         href="/#contact"
-                        className="px-5 py-2 lg:px-7 lg:py-3 text-sm lg:text-base font-medium bg-white text-black rounded-full hover:bg-gray-200 transition-colors"
+                        className="px-5 py-2 lg:px-7 lg:py-3 text-sm lg:text-base font-medium bg-heading text-white rounded-full hover:bg-heading/90 transition-colors"
                         aria-label="Contact us to get started"
                     >
                         Get Started
@@ -106,13 +106,13 @@ export default function Header() {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden z-50 text-white p-2"
+                    className="md:hidden z-50 text-foreground p-2"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     aria-expanded={isMobileMenuOpen}
                     aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                     aria-controls="mobile-menu"
                 >
-                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    {isMobileMenuOpen ? <X size={24} className="text-white" /> : <Menu size={24} />}
                 </button>
 
                 {/* Mobile Nav */}
@@ -164,7 +164,7 @@ function ThemeToggle() {
     return (
         <button
             onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-300 hover:text-white"
+            className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-foreground/80 hover:text-heading"
             aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
         >
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}

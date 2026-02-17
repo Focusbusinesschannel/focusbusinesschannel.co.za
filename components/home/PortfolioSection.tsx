@@ -47,8 +47,8 @@ export default function PortfolioSection() {
             <div className="container mx-auto px-6 md:px-10 xl:px-20 3xl:max-w-screen-2xl">
                 <div className="max-w-3xl 3xl:max-w-5xl mb-16 lg:mb-24">
                     <span className="text-accent text-sm sm:text-base font-bold tracking-widest uppercase mb-4 block">Our Work</span>
-                    <h2 className="text-4xl md:text-6xl lg:text-7xl 3xl:text-8xl font-display font-bold text-white mb-6">
-                        Case studies of <span className="text-gray-500">empowering growth.</span>
+                    <h2 className="text-4xl md:text-6xl lg:text-7xl 3xl:text-8xl font-display font-bold text-heading mb-6">
+                        Case studies of <span className="text-secondary">empowering growth.</span>
                     </h2>
                 </div>
 
@@ -83,21 +83,21 @@ export default function PortfolioSection() {
                                 <span className="text-accent text-xs sm:text-sm font-bold uppercase tracking-widest mb-2 block">
                                     {project.category}
                                 </span>
-                                <h3 className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-display font-semibold text-white mb-3 group-hover:text-accent transition-colors">
+                                <h3 className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-display font-semibold text-heading mb-3 group-hover:text-accent transition-colors">
                                     {project.title}
                                 </h3>
-                                <p className="text-gray-400 leading-relaxed text-sm md:text-base lg:text-lg 3xl:text-xl mb-4">
+                                <p className="text-foreground/80 leading-relaxed text-sm md:text-base lg:text-lg 3xl:text-xl mb-4">
                                     {project.description}
                                 </p>
 
                                 {project.testimonial && (
-                                    <p className="text-gray-300 italic text-sm md:text-base lg:text-lg 3xl:text-xl mb-4 border-l-2 border-accent/50 pl-4">
+                                    <p className="text-foreground/70 italic text-sm md:text-base lg:text-lg 3xl:text-xl mb-4 border-l-2 border-accent/50 pl-4">
                                         {project.testimonial}
                                     </p>
                                 )}
 
-                                <div className="pt-4 border-t border-white/5 mt-auto">
-                                    <span className="text-white/70 font-mono text-xs md:text-sm lg:text-base 3xl:text-lg">
+                                <div className="pt-4 border-t border-black/10 dark:border-white/5 mt-auto">
+                                    <span className="text-heading/70 font-mono text-xs md:text-sm lg:text-base 3xl:text-lg">
                                         {project.metrics}
                                     </span>
                                 </div>

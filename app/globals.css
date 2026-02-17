@@ -6,6 +6,7 @@
   /* Default LIGHT Mode */
   --background: #DBE9F3;
   --foreground: #000000;
+  --heading: #4e2d78;
   --primary: #000000;
   --secondary: #4b5563;
   /* Gray-600 */
@@ -23,6 +24,7 @@
 .dark {
   --background: #0a0a0a;
   --foreground: #ffffff;
+  --heading: #ffffff;
   --primary: #ffffff;
   --secondary: #9ca3af;
   --accent: #3b82f6;

@@ -62,7 +62,7 @@ export default function Hero() {
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl 3xl:text-5xl font-display font-medium text-white/70 mb-2 whitespace-nowrap"
+                                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl 3xl:text-5xl font-display font-medium text-heading/70 mb-2 whitespace-nowrap"
                             >
                                 Your Total Growth Solution.
                             </motion.h3>
@@ -72,7 +72,7 @@ export default function Hero() {
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-                                className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-8xl 3xl:text-9xl font-display font-bold leading-tight tracking-tight text-white m-0 whitespace-nowrap"
+                                className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-8xl 3xl:text-9xl font-display font-bold leading-tight tracking-tight text-heading m-0 whitespace-nowrap"
                             >
                                 <span className="text-gradient-purple-red">Driving Business Growth.</span>
                             </motion.h1>
@@ -84,7 +84,7 @@ export default function Hero() {
                             transition={{ duration: 1, delay: 0.4 }}
                             className="max-w-md 3xl:max-w-xl"
                         >
-                            <p className="text-base sm:text-lg md:text-xl 3xl:text-2xl text-secondary leading-relaxed font-sans">
+                            <p className="text-base sm:text-lg md:text-xl 3xl:text-2xl text-foreground leading-relaxed font-sans">
                                 We are your single point of contact for everything a business needs to scale.
                                 As your Business Growth Partner, we bridge the gap between strategy and execution.
                             </p>
