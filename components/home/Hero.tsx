@@ -57,24 +57,14 @@ export default function Hero() {
                 <div className="relative w-full lg:w-[45%] h-full flex flex-col justify-center px-6 sm:px-10 md:px-20 lg:px-24 xl:px-32 3xl:px-48 z-20">
                     <div className="space-y-6 md:space-y-8 lg:space-y-10 3xl:space-y-14">
                         <div>
-                            {/* Smaller H3 style for the first part */}
-                            <motion.h3
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl 3xl:text-5xl font-display font-medium text-heading/70 mb-2 whitespace-nowrap"
-                            >
-                                Your Total Growth Solution.
-                            </motion.h3>
-
-                            {/* Main H1 with purple-red gradient */}
+                            {/* Main H1 - Clear Value Proposition */}
                             <motion.h1
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-                                className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-8xl 3xl:text-9xl font-display font-bold leading-tight tracking-tight text-heading m-0 whitespace-nowrap"
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-8xl 3xl:text-9xl font-display font-bold leading-tight tracking-tight text-heading m-0"
                             >
-                                <span className="text-gradient-purple-red">Driving Business Growth.</span>
+                                We Generate Qualified Leads for Growing Businesses
                             </motion.h1>
                         </div>
 
@@ -85,8 +75,7 @@ export default function Hero() {
                             className="max-w-md 3xl:max-w-xl"
                         >
                             <p className="text-base sm:text-lg md:text-xl 3xl:text-2xl text-foreground leading-relaxed font-sans">
-                                We are your single point of contact for everything a business needs to scale.
-                                As your Business Growth Partner, we bridge the gap between strategy and execution.
+                                Web Design. Google Ads. SEO. All managed in one place to turn clicks into paying customers.
                             </p>
                         </motion.div>
 
@@ -96,11 +85,11 @@ export default function Hero() {
                             transition={{ duration: 0.8, delay: 0.6 }}
                             className="flex flex-row items-center gap-3 sm:gap-4 pt-4"
                         >
-                            <Link href="#services" className="px-5 sm:px-6 md:px-10 py-3 sm:py-4 md:py-5 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-all hover:scale-105 shadow-2xl text-xs sm:text-sm md:text-lg whitespace-nowrap">
-                                Our Services
+                            <Link href="#contact" className="px-5 sm:px-6 md:px-10 py-3 sm:py-4 md:py-5 bg-accent text-white font-bold rounded-full hover:bg-accent/90 transition-all hover:scale-105 shadow-2xl text-xs sm:text-sm md:text-lg whitespace-nowrap">
+                                Book Free Strategy Call
                             </Link>
-                            <Link href="#mission" className="px-5 sm:px-6 md:px-10 py-3 sm:py-4 md:py-5 glass-panel text-white font-bold rounded-full hover:bg-white/10 transition-all border border-white/10 text-xs sm:text-sm md:text-lg whitespace-nowrap">
-                                Get to Know Us
+                            <Link href="#portfolio" className="px-5 sm:px-6 md:px-10 py-3 sm:py-4 md:py-5 border-2 border-heading text-heading font-bold rounded-full hover:bg-heading hover:text-white transition-all text-xs sm:text-sm md:text-lg whitespace-nowrap">
+                                See Our Work
                             </Link>
                         </motion.div>
                     </div>

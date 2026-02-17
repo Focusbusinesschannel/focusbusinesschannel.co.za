@@ -10,7 +10,8 @@ export default function BookingForm() {
         name: '',
         email: '',
         subject: 'Book a Strategy Call',
-        message: ''
+        message: '',
+        _gotcha: '' // Honeypot field
     });
     const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -62,7 +63,7 @@ export default function BookingForm() {
             }
 
             setStatus('success');
-            setFormData({ name: '', email: '', subject: 'Book a Strategy Call', message: '' });
+            setFormData({ name: '', email: '', subject: 'Book a Strategy Call', message: '', _gotcha: '' });
         } catch (error) {
             console.error('Submission error:', error);
             setStatus('error');
@@ -133,6 +134,17 @@ export default function BookingForm() {
                                 required
                             />
                             {errors.message && <p className="text-xs text-red-500 mt-1">{errors.message}</p>}
+                        </div>
+
+                        {/* Honeypot Field - Hidden from real users */}
+                        <div className="hidden" aria-hidden="true">
+                            <input
+                                type="text"
+                                value={formData._gotcha}
+                                onChange={(e) => setFormData({ ...formData, _gotcha: e.target.value })}
+                                tabIndex={-1}
+                                autoComplete="off"
+                            />
                         </div>
 
                         {status === 'error' && (
