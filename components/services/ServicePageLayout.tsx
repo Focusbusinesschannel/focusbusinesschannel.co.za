@@ -25,6 +25,8 @@ interface ServicePageLayoutProps {
     howItWorks: { title: string; description: string }[];
     process: { title: string; description: string }[];
     faqs: { question: string; answer: string }[];
+    whyItMatters?: { title: string; points: string[] };
+    pricing?: { title: string; packages: { name: string; price: string; features: string[] }[] };
 }
 
 export default function ServicePageLayout({
@@ -38,7 +40,9 @@ export default function ServicePageLayout({
     children,
     howItWorks,
     process,
-    faqs
+    faqs,
+    whyItMatters,
+    pricing
 }: ServicePageLayoutProps) {
     return (
         <div className="min-h-screen bg-background text-foreground font-sans selection:bg-accent selection:text-white">
@@ -81,6 +85,33 @@ export default function ServicePageLayout({
                     </motion.div>
                 </div>
             </header>
+
+            {/* Why It Matters Section */}
+            {whyItMatters && (
+                <section className="py-20 md:py-24 bg-background border-b border-white/5">
+                    <div className="container mx-auto px-6 max-w-5xl">
+                        <div className="text-center mb-12">
+                            <span className="text-accent text-sm font-bold tracking-widest uppercase mb-4 block">Business Impact</span>
+                            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">{whyItMatters.title}</h2>
+                        </div>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            {whyItMatters.points.map((point, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className="flex items-start gap-3 p-6 bg-surface/50 border border-white/5 rounded-xl hover:border-accent/30 transition-colors"
+                                >
+                                    <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
+                                    <p className="text-foreground/80 text-sm md:text-base leading-relaxed">{point}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* Approach / Use Cases */}
             <section className="py-24 bg-surface/50 border-y border-black/10 dark:border-white/5">
@@ -191,6 +222,59 @@ export default function ServicePageLayout({
                     </div>
                 </div>
             </section>
+
+            {/* Pricing & Packages Section */}
+            {pricing && (
+                <section className="py-24 bg-background border-y border-white/5">
+                    <div className="container mx-auto px-6 max-w-6xl">
+                        <div className="text-center mb-16">
+                            <span className="text-accent text-sm font-bold tracking-widest uppercase mb-4 block">Investment</span>
+                            <h2 className="text-4xl font-display font-bold mb-4">{pricing.title}</h2>
+                            <p className="text-foreground/70 text-lg">Transparent pricing to help you plan your growth.</p>
+                        </div>
+                        <div className="grid md:grid-cols-3 gap-8">
+                            {pricing.packages.map((pkg, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: index * 0.15 }}
+                                    viewport={{ once: true }}
+                                    className={`p-8 rounded-2xl border transition-all duration-300 ${index === 1
+                                            ? 'bg-accent/5 border-accent shadow-lg scale-105'
+                                            : 'bg-surface/50 border-white/10 hover:border-accent/30'
+                                        }`}
+                                >
+                                    {index === 1 && (
+                                        <span className="inline-block px-3 py-1 bg-accent text-white text-xs font-bold rounded-full mb-4">
+                                            Most Popular
+                                        </span>
+                                    )}
+                                    <h3 className="text-2xl font-display font-bold mb-2">{pkg.name}</h3>
+                                    <p className="text-3xl font-bold text-accent mb-6">{pkg.price}</p>
+                                    <ul className="space-y-3 mb-8">
+                                        {pkg.features.map((feature, idx) => (
+                                            <li key={idx} className="flex items-start gap-2 text-foreground/80 text-sm">
+                                                <ChevronRight size={16} className="text-accent flex-shrink-0 mt-0.5" />
+                                                <span>{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <Link
+                                        href="/#contact"
+                                        className={`block text-center py-3 rounded-lg font-bold transition-all ${index === 1
+                                                ? 'bg-accent text-white hover:bg-accent/90'
+                                                : 'bg-white/5 text-heading hover:bg-white/10'
+                                            }`}
+                                    >
+                                        Get Started
+                                    </Link>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* Booking / CTA Section */}
             <section className="py-32 relative overflow-hidden">
